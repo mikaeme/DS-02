@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: darkblue;
+    --color-1: #ff5A00;
+    --color-2: #F2F3F4;
+    --color-3: #EE8434;
+    --color-4: #383D3B;
+    --color-5: #0060a3;
+    --color-6: #779FA1;
+}
+
+p {
+    font: 1.5em 'Rubik';
+    padding-top: 0.5em;
+}
+
+h1 {
+    font: 2.5em 'Quattrocento Sans';
+    padding-top: 0.5em;
+}
+
+body {
+    background-color: darkblue;
+    color: white;
+    /* font-family: 'Assistant'; */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    height: 10vh;
+    text-align: center;
+    width: 100%;    
+    font-family: 'Raleway';
+}
+
+ul {
+    list-style-type: none;
+}
+
+.metropolia {
+    display: flex;
+    justify-content: left;
+}
+
+#m-logo {
+   height: 100%;
+   padding-right: 1em;
+}
+
+main {
+    height: 88vh;
+    padding-bottom: 0.5em;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 0.5em;
+    height: 50%;
+}
+
+#weather {
+    padding: 1em;
+    font-family: 'Noto Sans JP';
+}
+
+.window {
+    text-align: center;
+    border-radius: 3px;
+    margin: 0.3em;
+    height:100%;
+}
+
+.small-window {
+    width: 30%;
+}
+
+.big-window {
+    width: 70%;
+}
+
+.window-content {
+    padding: 1em;
+}
+
+#r1-w1{
+    background-color:var(--color-1);
+}
+#r1-w2{
+    background-color: var(--color-2);
+    color: black;
+    padding: 10px 0 0 10px;
+}
+#r1-w3 {
+    /* background-color: var(--color-3); */
+}
+#r2-w1 {
+    background-color: var(--color-4) ;
+}
+#r2-w2{
+    background-color: var(--color-5);
+}
+#r2-w3{
+    background-color: var(--color-6);
+}
+
+.hsl-list {
+    font: 1.1em 'Rubik';
+    padding-top: 0.5em;
+    text-align: left;
+}
+
+.hsl-row {
+    display: inline-flex;
+}
+
+.hsl-row > li {
+    padding-right: 1em;
+}
+
+.w-icon-sm {
+    width:3em;
+    padding-right: 0.5em;
+}
+
+.w-icon-md {
+    max-width: 10em;
+}
+
+.weather-graphic {
+    width: 200px;
+    height: 200px;
+    display: none;
+}
+
+#weather > li {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+}
