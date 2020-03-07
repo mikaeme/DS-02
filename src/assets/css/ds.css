@@ -36,7 +36,7 @@ header {
     padding: 1em;
     height: 10vh;
     text-align: center;
-    width: 100%;    
+    width: 100%;
     font-family: 'Raleway';
 }
 
@@ -80,14 +80,17 @@ main {
 
 .small-window {
     width: 30%;
+    /* height: fit-content; */
 }
 
 .big-window {
     width: 70%;
+   /*  height: fit-content; */
 }
 
 .window-content {
     padding: 1em;
+    height: fit-content;
 }
 
 #r1-w1{
@@ -106,7 +109,40 @@ main {
 }
 #r2-w2{
     background-color: var(--color-5);
+
 }
+#r2-w2 header{
+  height: 5vh;
+  padding: .5em;
+}
+/* #menu{
+  justify-content: space-between;
+  text-align: left;
+} */
+#menu li{
+  justify-content: flex-start;
+  display: inline;
+  font: 1.1em 'Rubik';
+  opacity: .7;
+}
+.time{
+  padding-left: 11px;
+}
+.line{
+  padding-left: 99px;
+}
+.dest{
+  padding-left: 88px;
+}
+.stop{
+  padding-left: 197px;
+}
+#hsl-logo{
+  height: 50px;
+  width: 150px;
+  display: flex;
+}
+
 #r2-w3{
     background-color: var(--color-6);
 }
@@ -115,10 +151,31 @@ main {
     font: 1.1em 'Rubik';
     padding-top: 0.5em;
     text-align: left;
+    width: 800px;
 }
 
 .hsl-row {
     display: inline-flex;
+    width: fit-content;
+    height: fit-content;
+    justify-content: space-between;
+}
+.hsl-time{
+  padding-left: 20px;
+  column-width: 100px;
+}
+.hsl-line{
+  color: yellow;
+  padding-left: 20px;
+  column-width: 100px;
+}
+.hsl-destination{
+  padding-left: 20px;
+  column-width: 267px;
+}
+.hsl-stop{
+  padding-left: 20px;
+  column-width: 100px;
 }
 
 .hsl-row > li {
