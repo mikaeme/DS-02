@@ -13,6 +13,12 @@ const showNews = async (report) => {
         if(loop[i].Text != null)
         document.querySelector('#subpage').innerHTML += ('<li>' + (loop[i].Text) + '</li>');
     }
+  /*
+    const array = [];
+    for (let i = 0; i < 10; i++) {
+      let row = news.report[i].name
+      row.push(array)
+     }*/
 };
 
 export { showNews };
