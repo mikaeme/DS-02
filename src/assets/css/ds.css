@@ -129,7 +129,6 @@ main {
   padding-left: 11px;
 }
 .line{
-  /* padding-left: 99px; */
   padding-left: 49px;
 }
 .dest{
@@ -163,7 +162,6 @@ main {
 }
 .hsl-time{
   padding-left: 20px;
-  /* column-width: 100px; */
   column-width: 50px;
 }
 .hsl-line{
