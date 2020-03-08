@@ -1,7 +1,6 @@
 import {getJsonNews} from './fetch-module';
 
 const showReport = async (report) => {
-    console.log(report);
 };
 
 const getAltNews = async () => {

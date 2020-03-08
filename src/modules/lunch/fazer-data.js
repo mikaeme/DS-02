@@ -13,7 +13,7 @@ const getFazerMenus = async () => {
     const responseEn = await getJsonMenu(url + 'en');
     const menu = await response;
     const menuEn = await responseEn;
-
+    console.log('fazer', menu);
     parseMenus(menu, menuEn);
 };
 

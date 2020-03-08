@@ -5,11 +5,11 @@
 }
 
 :root {
-    --background: darkblue;
+    --background: #00008b;
     --color-1: #ff5A00;
     --color-2: #F2F3F4;
-    --color-3: #EE8434;
-    --color-4: #383D3B;
+    --color-3: #ee8434;
+    --color-4: #000000;
     --color-5: #0060a3;
     --color-6: #779FA1;
 }
@@ -22,11 +22,12 @@ p {
 h1 {
     font: 2.5em 'Quattrocento Sans';
     padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 body {
-    background-color: darkblue;
-    color: white;
+    background-color: #00008b;
+    color: #ffffff;
     /* font-family: 'Assistant'; */
 }
 
@@ -42,8 +43,6 @@ header {
 
 ul {
     list-style-type: none;
-    text-align: left;
-    font-family: 'Rubik';
 }
 
 .metropolia {
@@ -52,8 +51,8 @@ ul {
 }
 
 #m-logo {
-   height: 100%;
-   padding-right: 1em;
+    height: 100%;
+    padding-right: 1em;
 }
 
 main {
@@ -73,21 +72,54 @@ main {
     font-family: 'Noto Sans JP';
 }
 
+#temp {
+    font-size: 2em;
+}
+
+#ttext>li {
+    font: 0.4em 'Roboto Mono';
+    text-align: left;
+    word-spacing: 0.5em;
+    line-height: 2;
+}
+
+#ttext>header {
+    height: 4em;
+    font: 0.9em 'Press Start 2P';
+    color: #ffffff;
+    background-color: #0000ff;
+    margin-bottom: 10px;
+}
+
+#ttext>header>h3 {
+    padding-top: 10px;
+    font-size: 0.4em;
+}
+
+#num {
+    color: #ffff00;
+}
+
+#time,
+#num {
+    text-transform: uppercase;
+}
+
 .window {
     text-align: center;
     border-radius: 3px;
     margin: 0.3em;
-    height:100%;
+    height: 100%;
 }
 
 .small-window {
     width: 30%;
-    /* height: fit-content; */
+    /*height: fit-content;*/
 }
 
 .big-window {
     width: 70%;
-   /*  height: fit-content; */
+    /*height: fit-content;*/
 }
 
 .window-content {
@@ -95,57 +127,73 @@ main {
     height: fit-content;
 }
 
-#r1-w1{
-    background-color:var(--color-1);
+#r1-w1 {
+    background-color: var(--color-1);
 }
-#r1-w2{
+
+#r1-w2 {
     background-color: var(--color-2);
-    color: black;
+    color: #000000;
     padding: 10px 0 0 10px;
 }
-#r1-w3 {
-    /* background-color: var(--color-3); */
-}
-#r2-w1 {
-    background-color: var(--color-4) ;
-}
-#r2-w2{
-    background-color: var(--color-5);
 
+#r1-w3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 50%;
+    /*background-color: var(--color-3);*/
 }
-#r2-w2 header{
-  height: 5vh;
-  padding: .5em;
+
+#r2-w1 {
+    background-color: var(--color-4);
 }
-/* #hsl-menu{
+
+#r2-w2 {
+    background-color: var(--color-5);
+}
+
+#r2-w2 header {
+    height: 5vh;
+    padding: .5em;
+}
+
+
+/* #menu{
   justify-content: space-between;
   text-align: left;
 } */
-#hsl-menu li{
-  justify-content: flex-start;
-  display: inline;
-  font: 1.1em 'Rubik';
-  opacity: .7;
-}
-.time{
-  padding-left: 11px;
-}
-.line{
-  padding-left: 49px;
-}
-.dest{
-  padding-left: 58px;
-}
-.stop{
-  padding-left: 197px;
-}
-#hsl-logo{
-  height: 50px;
-  width: 150px;
-  display: flex;
+
+#hsl-menu li {
+    justify-content: flex-start;
+    display: inline;
+    font: 1.1em 'Rubik';
+    opacity: .7;
 }
 
-#r2-w3{
+.time {
+    padding-left: 11px;
+}
+
+.line {
+    padding-left: 99px;
+}
+
+.dest {
+    padding-left: 88px;
+}
+
+.stop {
+    padding-left: 197px;
+}
+
+#hsl-logo {
+    height: 50px;
+    width: 150px;
+    display: flex;
+}
+
+#r2-w3 {
     background-color: var(--color-6);
 }
 
@@ -156,36 +204,40 @@ main {
     width: 800px;
 }
 
-.hsl-row, .lunch-row {
+.hsl-row {
     display: inline-flex;
     width: fit-content;
     height: fit-content;
     justify-content: space-between;
 }
-.hsl-time{
-  padding-left: 20px;
-  column-width: 50px;
-}
-.hsl-line{
-  color: yellow;
-  padding-left: 20px;
-  column-width: 70px;
-}
-.hsl-destination{
-  padding-left: 20px;
-  column-width: 267px;
-}
-.hsl-stop{
-  padding-left: 20px;
-  column-width: 100px;
+
+.hsl-time {
+    padding-left: 20px;
+    column-width: 90px;
 }
 
-.hsl-row > li {
-    padding-right: 1em;
+.hsl-line {
+    color: #ffff00;
+    padding-left: 20px;
+    column-width: 90px;
+}
+
+.hsl-destination {
+    padding-left: 20px;
+    column-width: 267px;
+}
+
+.hsl-stop {
+    padding-left: 7px;
+    column-width: 100px;
+}
+
+.hsl-row>li {
+    padding-right: 1.6em;
 }
 
 .w-icon-sm {
-    width:3em;
+    width: 3em;
     padding-right: 0.5em;
 }
 
@@ -199,8 +251,23 @@ main {
     display: none;
 }
 
-#weather > li {
+#weather>li {
     display: flex;
     justify-content: center;
-    padding: 0.5em;
+    padding: 0.1em;
+}
+
+.modal {
+    width: 80vw;
+    height: 80vh;
+    background-color: var(--color-2);
+    position: fixed;
+    top: 2em;
+    left: 2em;
+    display: none;
+}
+
+.modal-container{
+    display: flex;
+    
 }
