@@ -115,11 +115,11 @@ main {
   height: 5vh;
   padding: .5em;
 }
-/* #menu{
+/* #hsl-menu{
   justify-content: space-between;
   text-align: left;
 } */
-#menu li{
+#hsl-menu li{
   justify-content: flex-start;
   display: inline;
   font: 1.1em 'Rubik';
@@ -129,10 +129,11 @@ main {
   padding-left: 11px;
 }
 .line{
-  padding-left: 99px;
+  /* padding-left: 99px; */
+  padding-left: 49px;
 }
 .dest{
-  padding-left: 88px;
+  padding-left: 58px;
 }
 .stop{
   padding-left: 197px;
@@ -162,12 +163,13 @@ main {
 }
 .hsl-time{
   padding-left: 20px;
-  column-width: 100px;
+  /* column-width: 100px; */
+  column-width: 50px;
 }
 .hsl-line{
   color: yellow;
   padding-left: 20px;
-  column-width: 100px;
+  column-width: 70px;
 }
 .hsl-destination{
   padding-left: 20px;
