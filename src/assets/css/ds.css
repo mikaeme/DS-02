@@ -154,7 +154,7 @@ main {
     width: 800px;
 }
 
-.hsl-row {
+.hsl-row, .lunch-row {
     display: inline-flex;
     width: fit-content;
     height: fit-content;

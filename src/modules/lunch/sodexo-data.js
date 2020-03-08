@@ -10,17 +10,32 @@ const getMenus = async () => {
     const response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/152/2020-03-06');// Backup link for weekends
     //const response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/152/' + today);
     const menu = await response;
+    console.log(menu);
     parseMenus(menu);
 };
 
 const parseMenus = async (menu) => {
 
     for (let i in menu.courses) {
-        coursesFi.push(menu.courses[i].title_fi);
-        coursesEn.push(menu.courses[i].title_en);
+        let rowFi = {
+            title: menu.courses[i].title_fi,
+            price: menu.courses[i].price,
+            properties: menu.courses[i].properties,
+          };
+
+          let rowEn = {
+            title: menu.courses[i].title_en,
+            price: menu.courses[i].price,
+            properties: menu.courses[i].properties,
+          };
+          coursesFi.push(rowFi);
+          coursesEn.push(rowEn);
+
     }
-    coursesFi.sort();
-    coursesEn.sort();
+    console.log(coursesFi);
+    coursesFi.sort((a, b) => (a.title > b.title) ? 1 : -1);
+    coursesEn.sort((a, b) => (a.title > b.title) ? 1 : -1);
+
 };
 
 export { coursesEn, coursesFi, getMenus };

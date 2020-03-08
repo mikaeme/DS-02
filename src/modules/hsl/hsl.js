@@ -1,7 +1,6 @@
 'use strict';
 const apiUrl = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
 
-let row = {};
 const schedule = [];
 
 const stopId = [
@@ -62,9 +61,11 @@ const makeArray = async (result) => {
   const stop = await result.data.stop;
   for (let i = 0; i < 2; i++) {
     const ride = await stop.stoptimesWithoutPatterns[i];
-    row = {
-      time: getTime(ride.scheduledDeparture), line: ride.trip.routeShortName,
-      destination: ride.headsign !== null ? ride.headsign : ride.trip.tripHeadsign, stop: stop.name
+    let row = {
+      time: getTime(ride.scheduledDeparture), 
+      line: ride.trip.routeShortName,
+      destination: ride.headsign !== null ? ride.headsign : ride.trip.tripHeadsign, 
+      stop: stop.name
     };
     schedule.push(row);
   };
@@ -85,7 +86,7 @@ const fetchData = async (i) => {
   return data;
 };
 
-const hslQuery = async () => {
+const getHsl = async () => {
   for (let i in stopId) {
     const response = await fetchData(i);
     const result = await response;
@@ -95,6 +96,4 @@ const hslQuery = async () => {
   showResult();
 };
 
-// hslQuery();
-
-export {hslQuery};
+export {getHsl};
