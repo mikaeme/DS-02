@@ -46,6 +46,7 @@ const getStopData = (id) => {
 }`;
 };
 
+// Present data
 const showResult = () => {
   for (let i in schedule) {
     document.querySelector('.hsl-list').innerHTML += (`<ul class="hsl-row">
@@ -56,7 +57,8 @@ const showResult = () => {
     </ul>`);
   }
 };
-// Present received data
+
+// make an array out of received data
 const makeArray = async (result) => {
   const stop = await result.data.stop;
   for (let i = 0; i < 2; i++) {
@@ -83,6 +85,7 @@ const fetchData = async (i) => {
     body: getStopData(stopId[i])
   });
   let data = await response.json();
+  makeArray(data);
   return data;
 };
 
@@ -90,9 +93,8 @@ const getHsl = async () => {
   for (let i in stopId) {
     const response = await fetchData(i);
     const result = await response;
-    makeArray(result);
+    // makeArray(result);
   }
-  console.log(schedule);
   showResult();
 };
 

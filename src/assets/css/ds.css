@@ -42,6 +42,8 @@ header {
 
 ul {
     list-style-type: none;
+    text-align: left;
+    font-family: 'Rubik';
 }
 
 .metropolia {
