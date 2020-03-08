@@ -10,4 +10,7 @@ document.querySelector('.close-modal').addEventListener('click', () => {
     panel.style.display = 'none';
 });
 
+document.querySelector('#change-location').addEventListener('click', ()  => {
+    document.querySelector('#location').innerHTML = ('METROPOLIA Karaportti');
+});
 export {openAdminPanel};
