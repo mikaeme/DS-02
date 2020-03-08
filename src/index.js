@@ -1,7 +1,7 @@
 'use strict';
 
 import {getLunchMenu} from './modules/lunch/main-module';
-import {getHsl} from './modules/hsl/hsl';
+import {getHsl} from './modules/hsl/main-module';
 import {getWeather} from './modules/weather/weather';
 import {getNews} from './modules/news/teksti-tv';
 import {getAltNews} from './modules/news/news';
