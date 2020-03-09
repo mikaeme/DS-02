@@ -6,9 +6,9 @@
 
 :root {
     --background: #000099;
-    --color-1: #f3ebeb;
-    --color-2: #F2F3F4;
-    --color-3: linear-gradient(0deg, #00cccc 0%, #90ffff 100%);
+    --color-1: #ebe4db;
+    --color-2: #ff7b00cc;
+    --color-3: linear-gradient(0deg, #0aacac 0%, #83ecec 100%);
     --color-4: #000000;
     --color-5: #0060a3;
     --color-6: #779FA1;
@@ -26,7 +26,11 @@ h1 {
 }
 
 body {
-    background-color: var(--background);
+    /* background-image: url('./assets/img/metropolia_sininenlogo.png');
+    background-size: cover;*/
+    background-image: linear-gradient(to bottom right, #982e91, #f93b3b, #ff8600);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #ffffff;
     /* font-family: 'Assistant'; */
 }
@@ -37,6 +41,7 @@ header {
     padding: 0.5em;
     height: 10vh;
     text-align: center;
+    text-shadow: 1px 1px 8px #000000;
     width: 100%;
     font-family: 'Raleway';
 }
@@ -51,7 +56,7 @@ ul {
 }
 
 #m-logo {
-    height: 100%;
+    width: 15%;
     padding-right: 1em;
 }
 
@@ -65,47 +70,6 @@ main {
     justify-content: center;
     margin: 0.5em;
     height: 50%;
-}
-
-#weather {
-    padding: 1em;
-    font-family: 'Noto Sans JP';
-}
-
-#temp {
-    font-size: 2em;
-}
-
-
-/* TELETEXT */
-
-#ttext>li {
-    font: 0.4em 'Roboto Mono';
-    text-align: left;
-    word-spacing: 0.5em;
-    line-height: 2;
-}
-
-#ttext>header {
-    height: 4em;
-    font: 0.9em 'Press Start 2P';
-    color: #ffffff;
-    background-color: #0000ff;
-    margin-bottom: 10px;
-}
-
-#ttext>header>h3 {
-    padding-top: 10px;
-    font-size: 0.4em;
-}
-
-#num {
-    color: #ffff00;
-}
-
-#time,
-#num {
-    text-transform: uppercase;
 }
 
 
@@ -144,20 +108,26 @@ main {
     background-image: var(--color-3);
     height: 7vh;
     font-size: 1em;
+    text-shadow: 1px 1px 4px grey;
     color: #ffffff;
 }
 
 #r1-w2 {
     background-color: var(--color-2);
-    color: #000000;
-    padding: 10px 0 0 10px;
+    /*color: #000000;*/
+    /*padding: 10px 0 0 10px;*/
 }
 
 #r1-w3 {
     display: flex;
-    flex-direction: row;
-    align-items: top;
-    border-radius: 50%;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+#r1-w3 header {
+    font-size: 2em;
+    padding-left: 40%;
+    text-transform: uppercase;
     /*background-color: var(--color-3);*/
 }
 
@@ -176,14 +146,95 @@ main {
 
 
 /*#r2-w3 {
-    background-color: var(--color-6);
+  background-color: var(--color-6);
 }*/
 
 
-/* #menu{
-justify-content: space-between;
-text-align: left;
-} */
+/* LUNCH MENU */
+
+.lunch-menu {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 0.7m;
+    line-height: 2;
+    ;
+}
+
+
+/* WEATHER */
+
+#weather {
+    font-family: 'Roboto Mono';
+}
+
+.weather-graphic {
+    width: 200px;
+    height: 200px;
+    display: none;
+}
+
+#temp {
+    font-size: 3em;
+}
+
+
+/* CAROUSEL EI TOIMI! */
+
+#slides {
+    position: relative;
+    height: 300px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slide {
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+}
+
+.slide:nth-of-type(1) {
+    background: red;
+}
+
+.slide:nth-of-type(2) {
+    background: orange;
+}
+
+.slide:nth-of-type(3) {
+    background: green;
+}
+
+.slide:nth-of-type(4) {
+    background: blue;
+}
+
+.slide:nth-of-type(5) {
+    background: purple;
+}
 
 
 /* HSL */
@@ -234,6 +285,8 @@ text-align: left;
     width: fit-content;
     height: fit-content;
     justify-content: space-between;
+    line-height: 1.8;
+    ;
 }
 
 .hsl-time {
@@ -262,24 +315,31 @@ text-align: left;
 }
 
 
-/* WEATHER */
+/* TELETEXT */
 
-.weather-graphic {
-    width: 200px;
-    height: 200px;
-    display: none;
+#ttext>li {
+    font: 1em 'Roboto Mono';
+    text-align: left;
+    word-spacing: 0.5em;
+    line-height: 1.5;
 }
 
+#ttext>header {
+    height: 2.2em;
+    font: 1.9em 'Press Start 2P';
+    color: #ffffff;
+    background-color: #0000ff;
+    margin-bottom: 10px;
+}
 
-/* LUNCH MENU */
+#ttext>header>h3 {
+    padding-top: 10px;
+    font-size: 0.8em;
+    align-self: center;
+}
 
-.lunch-menu {
-    color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
-    font-size: 0.5em;
-    line-height: 2;
-    ;
+#num {
+    color: #ffff00;
 }
 
 /* ADMIN PANEL */
@@ -296,5 +356,9 @@ text-align: left;
 
 .modal-container{
     display: flex;
+}
     
+#time,
+#num {
+    text-transform: uppercase;
 }

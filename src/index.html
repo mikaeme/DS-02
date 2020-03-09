@@ -7,14 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/ds.css">
     <title>DS</title>
-    <link href="https://fonts.googleapis.com/css?family=Assistant|Noto+Sans+JP|Quattrocento+Sans|Press Start 2P|Raleway|Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant|Noto+Sans+JP|Quattrocento+Sans|Press Start 2P|Raleway|Roboto+Mono|Rubik&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <div class="metropolia">
-            <img id="m-logo" src="./assets/img/metropolia_b.png" alt="Logo">
-            <h1 id="location">METROPOLIA Myyrmäki</h1>
+            <img id="m-logo" src="./assets/img/metropolia_oranssilogo.svg" alt="Logo">
+            <h1>METROPOLIA Myyrmäki</h1>
         </div>
     </header>
 
@@ -28,7 +28,17 @@
             </div>
             <div class="window big-window" id="r1-w2">
                 <div class="window-content">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="176.125" height="82" viewBox="0 0 176.125 82">
+                    <ul id="slides">
+                        <li class="slide showing">Slide 1</li>
+                        <li class="slide">Slide 2</li>
+                        <li class="slide">Slide 3</li>
+                        <li class="slide">Slide 4</li>
+                        <li class="slide">Slide 5</li>
+                    </ul>
+                </div>
+
+
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="176.125" height="82" viewBox="0 0 176.125 82">
                         <defs>
                             <style>
                                 .cls-1 {
@@ -142,24 +152,27 @@
                     </p>
                     <p>Stipendiä voi hakea vaihto-, free mover- tai tutkinto-opintoihin lukuvuodelle 2020-2021</p>
                     <p>Haku päättyy 6.4.2020 klo 10!</p>
-                    <!-- <ul class="">
+                    <ul class="">
                         <li class="some">FB</li>
                         <li class="some">IG</li>
                         <li class="some">Twitter</li>
                     </ul> -->
-                </div>
+            </div>
             </div>
             <div class="window small-window" id="r1-w3">
+                <header>Vantaa</header>
+                <ul id="weather">
+                    <li id="cloud"></li>
+                    <li id="temp"></li>
+                    <li id="wind"></li>
+
+                </ul>
+
                 <div id="cloud-01"><img class="w-icon-md" src="./assets/img/cloud_01.png" alt="cloud"></div>
                 <div id="cloud-02"><img class="w-icon-md" src="./assets/img/cloud_02.png" alt="cloud"></div>
                 <div id="cloud-03"><img class="w-icon-md" src="./assets/img/cloud_03.png" alt="cloud"></div>
                 <div id="sun-01"><img class="w-icon-md" src="./assets/img/sun_01.png" alt="sun"></div>
 
-                <ul id="weather">
-                    <li id="temp"></li>
-                    <li id="wind"></li>
-                    <li id="cloud"></li>
-                </ul>
 
             </div>
         </section>
@@ -171,6 +184,7 @@
 
                     <header>
                         <ul id="hsl-menu">
+                            <!-- Mielestäni ei tarvita -->
                             <!---<li class="time">AIKA</li>
                             <li class="line">LINJA</li>-->
                             <li class="dest">MÄÄRÄNPÄÄ
