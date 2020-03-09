@@ -2,8 +2,13 @@
 const apiUrl = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
 
 const stopId = [
+<<<<<<< HEAD
     4150202,
     // 4150228,
+=======
+    // 4150202,
+    4150228,
+>>>>>>> 45b87347a5a9a573d8a7efbadaa1c958984d4efd
     4150201,
     // 4150296,
     4150269,
