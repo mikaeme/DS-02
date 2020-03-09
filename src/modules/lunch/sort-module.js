@@ -1,5 +1,5 @@
-import {menu,coursesFi,coursesEn, menuFazer, fazerFi, fazerEn} from '../index';
-import {finnish} from './language-module';
+import { menu, coursesFi, coursesEn, menuFazer, fazerFi, fazerEn } from '../index';
+import { finnish } from './language-module';
 
 const SortOrder = () => {
     menu.innerHTML = '';
@@ -25,4 +25,4 @@ const SortOrder = () => {
     };
 };
 
-export {SortOrder};
+export { SortOrder };

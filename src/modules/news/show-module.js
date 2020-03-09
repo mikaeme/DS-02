@@ -21,3 +21,5 @@ const showNews = async(report) => {
 };
 
 export { showNews };
+
+'use strict';

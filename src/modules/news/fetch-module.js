@@ -1,6 +1,6 @@
 'use strict';
 
-const getJsonNews = async (menuUrl) => {
+const getJsonNews = async(menuUrl) => {
     let response;
     try {
         response = await fetch(`${menuUrl}`);
@@ -15,4 +15,4 @@ const getJsonNews = async (menuUrl) => {
     return news;
 };
 
-export {getJsonNews};
+export { getJsonNews };
