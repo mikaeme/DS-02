@@ -1,5 +1,8 @@
 'use strict';
 import {setLocation} from './location';
+import {getLunchMenu, getHsl} from '../../index';
+
+let currentLocation = 0;
 
 const panel = document.querySelector('.modal');
 
@@ -11,8 +14,16 @@ document.querySelector('.close-modal').addEventListener('click', () => {
     panel.style.display = 'none';
 });
 
-document.querySelector('#change-location').addEventListener('click', ()  => {
+document.querySelector('#location-kara').addEventListener('click', ()  => {
     setLocation('Karaportti');
+    currentLocation = 1;
+    getLunchMenu();
 });
 
-export {openAdminPanel};
+document.querySelector('#location-myyr').addEventListener('click', ()  => {
+    setLocation('Myyrmäki');
+    currentLocation = 0;
+    getLunchMenu();
+});
+
+export {openAdminPanel, currentLocation};

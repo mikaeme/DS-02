@@ -1,6 +1,7 @@
 'use strict';
 
 const showLunchMenu = async(menu) => {
+  document.querySelector('.lunch-menu').innerHTML = ''; 
     for (let i in menu) {
         document.querySelector('.lunch-menu').innerHTML += (`<ul class="lunch-row">
       <li class="menu-title">${menu[i].title}</li>

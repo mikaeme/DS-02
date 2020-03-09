@@ -347,11 +347,13 @@ main {
 .modal {
     width: 80vw;
     height: 80vh;
-    background-color: var(--color-2);
+    color: black;
+    background-color: var(--color-1);
     position: fixed;
-    top: 2em;
-    left: 2em;
+    top: 10em;
+    left: 10em;
     display: none;
+    z-index: 10;
 }
 
 .modal-container{
