@@ -2,16 +2,8 @@
 const apiUrl = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
 
 const stopId = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-    4150202,
-    // 4150228,
-=======
-=======
->>>>>>> 45b87347a5a9a573d8a7efbadaa1c958984d4efd
     // 4150202,
     4150228,
->>>>>>> 45b87347a5a9a573d8a7efbadaa1c958984d4efd
     4150201,
     // 4150296,
     4150269,
@@ -55,9 +47,9 @@ const getTime = (seconds) => {
 };
 
 // make an array out of received data
-const makeArray = async(result) => {
+const makeArray = async (result) => {
     const stop = await result.data.stop;
-    for (let i = 1; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
         const ride = await stop.stoptimesWithoutPatterns[i];
         let row = {
             time: getTime(ride.scheduledDeparture),
@@ -71,7 +63,7 @@ const makeArray = async(result) => {
 };
 
 // Fetch data from HSL
-const fetchData = async(i) => {
+const fetchData = async (i) => {
     let response;
     response = await fetch(apiUrl, {
         method: 'POST',
@@ -82,7 +74,6 @@ const fetchData = async(i) => {
     });
     let data = await response.json();
     makeArray(data);
-    console.log(data);
     return data;
 };
 
