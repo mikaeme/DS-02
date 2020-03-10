@@ -28,7 +28,7 @@ h1 {
 body {
     /* background-image: url('./assets/img/metropolia_sininenlogo.png');
     background-size: cover;*/
-    padding: 4em;
+    padding: 1em;
     background-image: linear-gradient(to bottom right, #982e91, #f93b3b, #ff8600);
     background-repeat: no-repeat;
     background-size: cover;
@@ -70,11 +70,14 @@ main {
 
 .small-section {
     flex: 2;
+    margin: 1em;
+    height: 98%;
 }
 
 .big-section {
     /*display: block;*/
     flex: 5;
+    height: 93%;
 }
 
 .row {
@@ -172,23 +175,23 @@ main {
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
     font-size: 0.7vw;
-    line-height: 2;
+    line-height: 1.7;
 }
 
 .lunch-row {
     display: flex;
     width: 100%;
-    height: 3vw;
-    justify-content: space-evenly;
-    margin: 0px 0px 20px 0px;
+    height: 4vw;
+    justify-content: space-between;
+    margin: 0px 0px 15px 0px;
     background-image: linear-gradient( rgb(255, 255, 255) 10%, rgba(231, 224, 208, 0.87) 90%);
-    border-radius: 3px;
+    border-radius: 2px;
     border: 1px solid rgb(182, 189, 176);
     box-shadow: 1px 1px 4px rgb(189, 170, 161);
 }
 
 .lunch-menu li {
-    padding: 5px;
+    padding: 7px;
     opacity: .7;
 }
 
