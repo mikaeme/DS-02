@@ -1,12 +1,13 @@
 'use strict';
 
-/*import { nextSlide } from './modules/carousel/carousel';*/
+import { nextSlide } from './modules/carousel/carousel';
 import { getLunchMenu } from './modules/lunch/main-module';
 import { getHsl } from './modules/hsl/main-module';
 import { getWeather } from './modules/weather/weather';
 import { getNews } from './modules/news/teksti-tv';
 import {getSNews} from './modules/news/sports';
 import {getFNews} from './modules/news/foreign';
+
 
 const body = document.querySelector('body');
 
@@ -32,7 +33,8 @@ let timeNews = setInterval(() => {
     }
 }, 2000);
 
-/*nextSlide();*/
+
+nextSlide();
 getHsl();
 getWeather();
 // getNews();
