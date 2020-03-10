@@ -7,10 +7,16 @@ import { getWeather } from './modules/weather/weather';
 import { getNews } from './modules/news/teksti-tv';
 import {getSNews} from './modules/news/sports';
 import {getFNews} from './modules/news/foreign';
-
+import { openAdminPanel } from './modules/admin/admin';
 
 const body = document.querySelector('body');
 
+document.querySelector('#m-logo').addEventListener('click', () => openAdminPanel());
+
+let counter = 0;
+let timer = setInterval(() => {
+        getHsl();
+  }, 60000);
 
 let newsCounter = 0;
 let timeNews = setInterval(() => {
@@ -40,4 +46,4 @@ getWeather();
 // getNews();
 getLunchMenu();
 
-export { body };
+export { body, getLunchMenu, getHsl };

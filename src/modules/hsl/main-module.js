@@ -3,7 +3,10 @@ import { fetchData } from './fetch-module';
 import { showResult } from './show-module';
 import { stopId } from './fetch-module';
 
+let schedule = [];
+
 const getHsl = async() => {
+    schedule = [];
     for (let i in stopId) {
         const response = await fetchData(i);
         const result = await response;
@@ -11,4 +14,4 @@ const getHsl = async() => {
     showResult();
 };
 
-export { getHsl };
+export { getHsl, schedule };
