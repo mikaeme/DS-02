@@ -1,18 +1,8 @@
 'use strict';
-import {schedule} from './main-module';
- const apiUrl = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
+import { schedule } from './main-module';
+import { stopId } from './stops-module';
 
-const stopId = [
-    // 4150202,
-    4150228,
-    4150201,
-    // 4150296,
-    4150269,
-    4150268,
-    4150261,
-    4150551,
-    4150501
-];
+const apiUrl = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
 
 const getStopData = (id) => {
     return `{
@@ -79,4 +69,4 @@ const fetchData = async (i) => {
     return data;
 };
 
-export {fetchData, stopId };
+export { fetchData };

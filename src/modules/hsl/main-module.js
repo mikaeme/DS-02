@@ -1,7 +1,7 @@
 'use strict';
 import { fetchData } from './fetch-module';
 import { showResult } from './show-module';
-import { stopId } from './fetch-module';
+import { stopId } from './stops-module';
 
 let schedule = [];
 

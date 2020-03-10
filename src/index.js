@@ -19,8 +19,6 @@ let timer = setInterval(() => {
         getHsl();
   }, 60000);
 
-<<<<<<< HEAD
-=======
 let newsCounter = 0;
 let timeNews = setInterval(() => {
     newsCounter++;
@@ -42,7 +40,6 @@ let timeNews = setInterval(() => {
     }
 }, 2000);
 
->>>>>>> 1955ee709953a4273ae029becc80475e65089f89
 
 showTime();
 nextSlide();

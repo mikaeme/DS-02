@@ -366,8 +366,8 @@ header {
 /* ADMIN PANEL */
 
 .modal {
-    width: 80vw;
-    height: 80vh;
+    width: 90vw;
+    height: 90vh;
     color: black;
     background-color: var(--color-1);
     position: fixed;
@@ -379,4 +379,14 @@ header {
 
 .modal-container{
     display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.modal-container > button {
+    padding: 2em;
+    font: 3em 'Rubik';
+    background-color: var(--color-5);
+    color:white;
+    width: 30%;
 }
