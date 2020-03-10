@@ -1,5 +1,6 @@
 'use strict';
-const apiUrl = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
+import {schedule} from './main-module';
+ const apiUrl = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
 
 const stopId = [
     // 4150202,
@@ -37,8 +38,6 @@ const getStopData = (id) => {
   }`;
 };
 
-const schedule = [];
-
 const getTime = (seconds) => {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor(seconds / 60) - (hours * 60);
@@ -48,6 +47,7 @@ const getTime = (seconds) => {
 
 // make an array out of received data
 const makeArray = async (result) => {
+
     const stop = await result.data.stop;
     for (let i = 1; i < 3; i++) {
         const ride = await stop.stoptimesWithoutPatterns[i];
@@ -64,6 +64,7 @@ const makeArray = async (result) => {
 
 // Fetch data from HSL
 const fetchData = async (i) => {
+
     let response;
     response = await fetch(apiUrl, {
         method: 'POST',
@@ -73,8 +74,9 @@ const fetchData = async (i) => {
         body: getStopData(stopId[i])
     });
     let data = await response.json();
+
     makeArray(data);
     return data;
 };
 
-export { schedule, fetchData, stopId };
+export {fetchData, stopId };

@@ -15,9 +15,8 @@
         <div class="metropolia">
 
             <img id="m-logo" src="./assets/img/metropolia_oranssilogo.svg" alt="Logo">
-
-            <h1>METROPOLIA Myyrmäki</h1>
-
+            <!--<div id="clock"></div>-->
+            <h1 id="location">METROPOLIA Myyrmäki</h1>
         </div>
         <div id="clock" onload="showTime()"></div>
     </header>
@@ -220,6 +219,14 @@
                 </div>
                 <!--<div class="window small-window" id="r2-w3"></div>-->
             </section>
+        </div>
+        <div class="modal">
+            <div class="modal-container">
+                <button id="location-kara">Karaportti</button>
+                <button id="location-myyr">Myyrmäki</button>
+                <button id="location-myll">Myllypuro</button>
+                <button class="close-modal">CLOSE</button>
+            </div>
         </div>
     </main>
 
