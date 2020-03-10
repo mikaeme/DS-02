@@ -49,7 +49,7 @@ const getTime = (seconds) => {
 // make an array out of received data
 const makeArray = async (result) => {
     const stop = await result.data.stop;
-    for (let i = 0; i < 2; i++) {
+    for (let i = 1; i < 3; i++) {
         const ride = await stop.stoptimesWithoutPatterns[i];
         let row = {
             time: getTime(ride.scheduledDeparture),

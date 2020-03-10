@@ -342,7 +342,7 @@ main {
 /* TELETEXT */
 
 #ttext>li {
-    font: 0.5vw'Roboto Mono';
+    font: 0.9em 'Roboto Mono';
     text-align: left;
     word-spacing: 0.5em;
     line-height: 1.5;
@@ -366,6 +366,9 @@ main {
     color: #ffff00;
 }
 
+#num, #subpage {
+    padding: 0.5em 0 0 0.5em;
+}
 #time,
 #num {
     text-transform: uppercase;
