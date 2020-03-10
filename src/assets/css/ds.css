@@ -89,7 +89,7 @@ header {
 #clock {
     display: flex;
     justify-self: space-between;
-    color: #17D4FE;
+    color: #ffffff;
     font: 3em 'Roboto Mono';
     letter-spacing: 7px;
 }
@@ -127,12 +127,11 @@ header {
 }
 
 #r1-w1 header {
-    background-image: var(--color-3);
-    border-radius: 3px;
-    border: 1px solid rgb(54, 138, 138);
+    background: linear-gradient( #ec561f, #ec561f8e);
+    box-shadow: 2px 2px 8px rgb(218, 22, 8);
+    border-radius: 5px 5px 0 0;
     height: 7vh;
-    margin-bottom: 15px;
-    font-size: 3vh;
+    font: 3vh 'Raleway';
     text-shadow: 1px 1px 4px grey;
     color: #ffffff;
 }
@@ -143,15 +142,14 @@ header {
 
 #r1-w3 {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly;
+    /* padding: 6em; */
 }
 
-#r1-w3 header {
-    font-size: 2em;
-    padding-left: 40%;
+#r1-w3 h3 {
     text-transform: uppercase;
+    text-shadow: 1px 1px 4px #000000;
+    font: 2em 'Roboto Mono';
 }
 
 #r2-w2 {
@@ -172,28 +170,24 @@ header {
 /* LUNCH MENU */
 
 .lunch-menu {
-    color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font: 2vh 'Quattrocento Sans';
     text-align: left;
-    font-size: 2.4vh;
     line-height: 1.5;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 8px rgb(218, 22, 8);
 }
 
 .lunch-row {
     display: flex;
     width: 100%;
     height: 4.5vw;
-    justify-content: space-between;
-    margin: 0px 0px 15px 0px;
-    background-image: linear-gradient( rgb(255, 255, 255) 10%, rgba(231, 224, 208, 0.87) 90%);
+    line-height: 1.2;
     border-radius: 2px;
-    border: 1px solid rgb(182, 189, 176);
-    box-shadow: 1px 1px 4px rgb(189, 170, 161);
 }
 
 .lunch-menu li {
-    padding: 7px;
-    opacity: .7;
+    padding: 10px;
 }
 
 .menu-title {
@@ -215,42 +209,49 @@ header {
     font-family: 'Roboto Mono';
 }
 
-.weather-graphic {
-    width: 200px;
+#cloud-02>.w-icon-md {
     height: 200px;
-    display: none;
+    width: 250px;
+    object-fit: fill;
 }
 
 #temp {
     font-size: 3em;
 }
 
+#wind {
+    font-size: 2em;
+}
+
 
 /* SLIDESHOW */
-
-.slide-container {
-    display: flex;
-    justify-content: center;
-}
 
 .slides {
     margin: 0 auto;
     overflow: hidden;
 }
 
-.slides img {
+
+/* video {
+    width: 47% !important;
+    height: auto !important;
+} */
+
+.slides video {
     position: absolute;
     transition: opacity 1s;
     opacity: 0;
-    height: 40%;
+    object-fit: cover;
+    height: 42%;
+    width: 47%;
 }
 
-.slides img:first-child {
+.slides video:first-child {
     z-index: 2;
     opacity: 1;
 }
 
-.slides img:last-child {
+.slides video:last-child {
     z-index: 1;
     opacity: 1;
 }
@@ -334,7 +335,7 @@ header {
     font: 0.9em 'Roboto Mono';
     text-align: left;
     word-spacing: 0.5em;
-    line-height: 1.5;
+    line-height: 3;
 }
 
 #ttext>header {
@@ -355,9 +356,11 @@ header {
     color: #ffff00;
 }
 
-#num, #subpage {
+#num,
+#subpage {
     padding: 0.5em 0 0 0.5em;
 }
+
 #time,
 #num {
     text-transform: uppercase;

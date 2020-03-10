@@ -16,8 +16,8 @@ const showReport = async(report) => {
     const wind = Math.round(report.wind.speed);
     const clouds = report.clouds.all;
 
-    document.querySelector('#temp').innerHTML += ('<p>' + (temperature) + '°C</p>');
-    document.querySelector('#wind').innerHTML += ('<p>' + (wind) + ' m/s</p>');
+    document.querySelector('#temp').innerHTML += ((temperature) + '°C');
+    document.querySelector('#wind').innerHTML += ((wind) + ' m/s');
 
     if (clouds == 75) {
         cloud01.style.display = 'none';
