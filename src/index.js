@@ -13,7 +13,12 @@ const body = document.querySelector('body');
 document.querySelector('#m-logo').addEventListener('click', () => openAdminPanel());
 
 /*nextSlide();*/
-getHsl();
+let counter = 0;
+let timer = setInterval(() => {
+    console.log(`${counter++}. tick.`);
+        getHsl();
+  }, 60000);
+
 getWeather();
 getNews();
 getLunchMenu();

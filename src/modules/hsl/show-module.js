@@ -1,9 +1,10 @@
 'use strict';
-import { schedule } from './fetch-module';
+import { schedule } from './main-module';
 
 // Present data
 const showResult = () => {
     console.log('HSL', schedule);
+    document.querySelector('.hsl-list').innerHTML ='';
     for (let i in schedule) {
         document.querySelector('.hsl-list').innerHTML += (`<ul class="hsl-row">
       <li class="hsl-time">${schedule[i].time}</li>
