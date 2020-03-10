@@ -26,39 +26,15 @@ h1 {
 }
 
 body {
-    /* background-image: url('./assets/img/metropolia_sininenlogo.png');
-    background-size: cover;*/
     padding: 1em;
     background-image: linear-gradient(to bottom right, #982e91, #f93b3b, #ff8600);
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
-    /* font-family: 'Assistant'; */
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5em;
-    height: 10vh;
-    text-align: center;
-    text-shadow: 1px 1px 8px #000000;
-    width: 100%;
-    font: 0.8em 'Raleway';
 }
 
 ul {
     list-style-type: none;
-}
-
-.metropolia {
-    display: flex;
-    justify-content: left;
-}
-
-#m-logo {
-    width: 15%;
-    padding-right: 1em;
 }
 
 main {
@@ -75,7 +51,6 @@ main {
 }
 
 .big-section {
-    /*display: block;*/
     flex: 5;
     height: 93%;
 }
@@ -85,6 +60,38 @@ main {
     justify-content: center;
     margin: 0.5em;
     height: 49%;
+}
+
+
+/* LOGO AND CLOCK */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+    height: 10vh;
+    text-align: center;
+    text-shadow: 1px 1px 4px #000000;
+    width: 100%;
+    font: 0.8em 'Raleway';
+}
+
+.metropolia {
+    display: flex;
+    justify-content: left;
+}
+
+#m-logo {
+    width: 15%;
+    padding-right: 1em;
+}
+
+#clock {
+    display: flex;
+    justify-self: space-between;
+    color: #17D4FE;
+    font: 3em 'Roboto Mono';
+    letter-spacing: 7px;
 }
 
 
@@ -132,8 +139,6 @@ main {
 
 #r1-w2 {
     background-color: var(--color-2);
-    /*color: #000000;*/
-    /*padding: 10px 0 0 10px;*/
 }
 
 #r1-w3 {
@@ -147,7 +152,6 @@ main {
     font-size: 2em;
     padding-left: 40%;
     text-transform: uppercase;
-    /*background-color: var(--color-3);*/
 }
 
 #r2-w2 {
@@ -165,25 +169,20 @@ main {
 }
 
 
-/*#r2-w3 {
-  background-color: var(--color-6);
-}*/
-
-
 /* LUNCH MENU */
 
 .lunch-menu {
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
-    font-size: 0.7vw;
-    line-height: 1.7;
+    font-size: 2.4vh;
+    line-height: 1.5;
 }
 
 .lunch-row {
     display: flex;
     width: 100%;
-    height: 4vw;
+    height: 4.5vw;
     justify-content: space-between;
     margin: 0px 0px 15px 0px;
     background-image: linear-gradient( rgb(255, 255, 255) 10%, rgba(231, 224, 208, 0.87) 90%);
@@ -205,6 +204,10 @@ main {
     width: 30%;
 }
 
+.menu-properties {
+    width: 10%;
+}
+
 
 /* WEATHER */
 
@@ -223,7 +226,7 @@ main {
 }
 
 
-/* CAROUSEL EI TOIMI! */
+/* SLIDESHOW */
 
 .slide-container {
     display: flex;
@@ -267,26 +270,12 @@ main {
     opacity: .7;
 }
 
-
-/*Mielestäni näitä ei tarvita*/
-
-
-/*.time {
-    padding-left: 11px;
-}
-
-.line {
-    padding-left: 99px;
-}*/
-
 .dest {
     padding-left: 7.2em;
-    /* padding-left: 110px; */
 }
 
 .stop {
     padding-left: 14.5em;
-    /* padding-left: 196px; */
 }
 
 #hsl-logo {
