@@ -300,17 +300,18 @@ main {
 }*/
 
 .dest {
-    padding-left: 207px;
+    padding-left: 110px;
 }
 
 .stop {
-    padding-left: 197px;
+    padding-left: 196px;
 }
 
 #hsl-logo {
     height: 50px;
-    width: 150px;
-    display: flex;
+    width: 140px;
+  position: relative;
+  right: 27px;
 }
 
 .hsl-list {
