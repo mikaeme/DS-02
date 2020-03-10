@@ -14,16 +14,23 @@ document.querySelector('.close-modal').addEventListener('click', () => {
     panel.style.display = 'none';
 });
 
+document.querySelector('#location-myyr').addEventListener('click', ()  => {
+    setLocation('Myyrmäki');
+    currentLocation = 0;
+    getLunchMenu();
+});
+
 document.querySelector('#location-kara').addEventListener('click', ()  => {
     setLocation('Karaportti');
     currentLocation = 1;
     getLunchMenu();
 });
 
-document.querySelector('#location-myyr').addEventListener('click', ()  => {
-    setLocation('Myyrmäki');
-    currentLocation = 0;
+document.querySelector('#location-myll').addEventListener('click', ()  => {
+    setLocation('Myllypuro');
+    currentLocation = 2;
     getLunchMenu();
 });
+
 
 export {openAdminPanel, currentLocation};

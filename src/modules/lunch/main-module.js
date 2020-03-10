@@ -6,13 +6,12 @@ import { currentLocation } from '../admin/admin';
 
 const getLunchMenu = async () => {
  // fetch lunch data
-
-    if (currentLocation === 0) {
-        await getMenus();
-        showLunchMenu(coursesFi); // present it in HTML
-    } else {
+    if (currentLocation === 1) {
         await getFazerMenus();
         showLunchMenu(fazerFi); // present it in HTML
+    } else {
+        await getMenus();
+        showLunchMenu(coursesFi); // present it in HTML
     }
 };
 

@@ -1,8 +1,8 @@
 'use strict';
 import { getJsonMenu } from './fetch-module';
 
-const fazerFi = [];
-const fazerEn = [];
+let fazerFi = [];
+let fazerEn = [];
 let course = [];
 let courseEn = [];
 
@@ -17,6 +17,8 @@ const getFazerMenus = async() => {
 };
 
 const parseMenus = async(menu, menuEn) => {
+    fazerFi = [];
+    fazerEn = [];
     for (let i in menu.MenusForDays[0].SetMenus) {
         for (let j in menu.MenusForDays[0].SetMenus[i].Components) {
             course.push('\n' + menu.MenusForDays[0].SetMenus[i].Components[j]);

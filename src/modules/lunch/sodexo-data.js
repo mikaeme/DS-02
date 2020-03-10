@@ -1,22 +1,30 @@
 'use strict';
 import { getJsonMenu } from './fetch-module';
 import { dd, mm, yyyy } from './date';
+import { currentLocation} from '../admin/admin';
 
-const coursesFi = [];
-const coursesEn = [];
+let coursesFi = [];
+let coursesEn = [];
+
 const today = yyyy + '-' + mm + '-' + dd;
+let response;
 
 // fetch data from Sodexo
 const getMenus = async() => {
     // const response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/152/2020-03-06');// Backup link for weekends
-    const response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/152/' + today);
+    if(currentLocation === 2){
+      response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/158/' + today);
+    } else {
+    response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/152/' + today);
+    }
     const menu = await response;
     parseMenus(menu);
 };
 
 // make an array out of received data
 const parseMenus = async(menu) => {
-
+  coursesFi = [];
+  coursesEn = [];
     for (let i in menu.courses) {
         let rowFi = {
             title: menu.courses[i].title_fi,
