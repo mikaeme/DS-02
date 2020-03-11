@@ -6,6 +6,7 @@ import { stopId } from './stops-module';
 let schedule = [];
 
 const getHsl = async() => {
+    console.log('stopId', stopId);
     schedule = [];
     for (let i in stopId) {
         const response = await fetchData(i);

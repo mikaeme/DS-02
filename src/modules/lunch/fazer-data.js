@@ -26,7 +26,8 @@ const parseMenus = async(menu, menuEn) => {
         };
         let rowFi = {
             title: course,
-            price: menu.MenusForDays[0].SetMenus[i].Price
+            price: menu.MenusForDays[0].SetMenus[i].Price,
+            properties: ''
         };
         let rowEn = {
             title: courseEn,

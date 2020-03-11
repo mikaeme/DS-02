@@ -335,7 +335,7 @@ header {
     font: 0.9em 'Roboto Mono';
     text-align: left;
     word-spacing: 0.5em;
-    line-height: 3;
+    line-height: 2.8;
 }
 
 #ttext>header {
@@ -369,27 +369,41 @@ header {
 /* ADMIN PANEL */
 
 .modal {
-    width: 90vw;
+    width: 40vw;
     height: 90vh;
     color: black;
     background-color: var(--color-1);
     position: fixed;
-    top: 10em;
-    left: 10em;
+    top: 2em;
+    left: 30vw;
     display: none;
+    justify-content: center;
     z-index: 10;
+    box-shadow: 2px 2px 8px rgb(22, 2, 0);
 }
-
-.modal-container{
+-pö
+.modal-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.modal-button {
+    padding: 1em;
+    font: 2em 'Rubik';
+    background-color: var(--color-5);
+    color:white;
+    width: 10em;
+    margin: 1em 0 0 1em;
     text-align: center;
 }
 
-.modal-container > button {
-    padding: 2em;
-    font: 3em 'Rubik';
-    background-color: var(--color-5);
-    color:white;
-    width: 30%;
+.modal-button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#close-modal {
+    background-color: red;
+    margin-top: 6em;
 }

@@ -14,15 +14,13 @@ const body = document.querySelector('body');
 
 document.querySelector('#m-logo').addEventListener('click', () => openAdminPanel());
 
-let counter = 0;
-let timer = setInterval(() => {
+let hslTimer = setInterval(() => {
         getHsl();
   }, 60000);
 
 let newsCounter = 0;
-let timeNews = setInterval(() => {
+let newsTimer = setInterval(() => {
     newsCounter++;
-    console.log(newsCounter);
     if (newsCounter === 1) {
         getNews();
     }
@@ -40,12 +38,15 @@ let timeNews = setInterval(() => {
     }
 }, 2000);
 
+let weatherTimer = setInterval(() => {
+    getWeather();
+}, 600000);
 
 showTime();
 nextSlide();
 getHsl();
 getWeather();
-// getNews();
+getNews();
 getLunchMenu();
 
 export { body, getLunchMenu, getHsl };
