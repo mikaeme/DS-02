@@ -335,7 +335,7 @@ header {
     font: 0.9em 'Roboto Mono';
     text-align: left;
     word-spacing: 0.5em;
-    line-height: 3;
+    line-height: 2.5;
 }
 
 #ttext>header {
@@ -366,6 +366,7 @@ header {
     text-transform: uppercase;
 }
 
+
 /* ADMIN PANEL */
 
 .modal {
@@ -380,6 +381,6 @@ header {
     z-index: 10;
 }
 
-.modal-container{
+.modal-container {
     display: flex;
 }
