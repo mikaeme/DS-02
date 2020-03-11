@@ -24,7 +24,7 @@
     <main>
         <div class="small-section">
             <div id="r1-w1">
-                <header>Lounaslista Leiritie</header>
+                <header>Lounaslista</header>
                 <div class="window-content">
                     <ul class="lunch-menu"></ul>
                 </div>
@@ -167,11 +167,12 @@
                     </div>
                 </div>
                 <div class="window small-window" id="r1-w3">
-                    <h3>Vantaa</h3>
+                    <h3 id="weather-location">Vantaa</h3>
                     <div id="cloud-01"><img class="w-icon-md" src="./assets/img/cloud_01.png" alt="cloud"></div>
                     <div id="cloud-02"><img class="w-icon-md" src="./assets/img/cloud_02.png" alt="cloud"></div>
                     <div id="cloud-03"><img class="w-icon-md" src="./assets/img/cloud_03.png" alt="cloud"></div>
                     <div id="sun-01"><img class="w-icon-md" src="./assets/img/sun_01.png" alt="sun"></div>
+                    <div id="raindrop-01"><img class="w-icon-md" src="./assets/img/raindrop_01.png" alt="sun"></div>
 
                     <ul id="weather">
 
@@ -180,9 +181,6 @@
                         <li id="cloud"></li>
 
                     </ul>
-
-
-
                 </div>
             </section>
             <section class="row">
@@ -222,33 +220,15 @@
         </div>
         <div class="modal">
             <div class="modal-container">
-                <button id="location-kara">Karaportti</button>
-                <button id="location-myyr">Myyrmäki</button>
-                <button id="location-myll">Myllypuro</button>
-                <button class="close-modal">CLOSE</button>
+                <div class="modal-button" id="location-myyr">Myyrmäki</div>                
+                <div class="modal-button" id="location-kara">Karaportti</div>
+                <div class="modal-button" id="location-myll">Myllypuro</div>
+                <div class="modal-button" id="location-ara">Arabia</div>
+                <div class="modal-button" id="close-modal">CLOSE</div>
             </div>
         </div>
     </main>
 
-    <!--<div class="modal">
-        <div class="modal-container">
-            <button>Karaportti</button>
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-                <div id="change-location" class="dropdown-content">
-                    <a>Myyrmäki</a>
-                    <a>Karaportti</a>
-                    <a>Myllypuro</a>
-                </div>
-            </div>
-            <button class="close-modal">CLOSE</button>
-        </div>-->
-
-
-    <!--<script src="./modules/carousel.js"></script>
-     <script src="./modules/app.js"></script>
-    <script src="./modules/hsl.js"></script>
-    <script src="./modules/teksti-tv.js"></script> -->
 </body>
 
 </html>

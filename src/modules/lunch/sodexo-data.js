@@ -14,6 +14,8 @@ const getMenus = async() => {
     // const response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/152/2020-03-06');// Backup link for weekends
     if(currentLocation === 2){
       response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/158/' + today);
+    } else if(currentLocation === 3){
+            response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/68/' + today);
     } else {
     response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/152/' + today);
     }

@@ -1,11 +1,12 @@
 'use strict';
 import { fetchData } from './fetch-module';
 import { showResult } from './show-module';
-import { stopId } from './fetch-module';
+import { stopId } from './stops-module';
 
 let schedule = [];
 
 const getHsl = async() => {
+    console.log('stopId', stopId);
     schedule = [];
     for (let i in stopId) {
         const response = await fetchData(i);

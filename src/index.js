@@ -10,6 +10,8 @@ import { getSNews } from './modules/news/sports';
 import { getFNews } from './modules/news/foreign';
 
 
+
+
 import { openAdminPanel } from './modules/admin/admin';
 
 const body = document.querySelector('body');
@@ -20,11 +22,13 @@ let counter = 0;
 let timer = setInterval(() => {
     getHsl();
 }, 60000);
+let hslTimer = setInterval(() => {
+    getHsl();
+}, 60000);
 
 let newsCounter = 0;
-let timeNews = setInterval(() => {
+let newsTimer = setInterval(() => {
     newsCounter++;
-    console.log(newsCounter);
     if (newsCounter === 1) {
         getNews();
     }
@@ -42,13 +46,17 @@ let timeNews = setInterval(() => {
     }
 }, 2000);
 
+let weatherTimer = setInterval(() => {
+    getWeather();
+}, 600000);
 
 showTime();
 nextSlide();
 getHsl();
 getWeather();
-// getNews();
+getNews();
 getLunchMenu();
 
 export { body };
 export { getLunchMenu, getHsl };
+export { getWeather };
