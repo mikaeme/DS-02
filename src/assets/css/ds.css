@@ -223,7 +223,9 @@ header {
     font-size: 2em;
 }
 
-
+#raindrop-id {
+    width: 1em;
+}
 /* SLIDESHOW */
 
 .slides {

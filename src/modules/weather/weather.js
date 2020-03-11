@@ -6,6 +6,7 @@ const cloud01 = document.querySelector('#cloud-01');
 const cloud02 = document.querySelector('#cloud-02');
 const cloud03 = document.querySelector('#cloud-03');
 const sun01 = document.querySelector('#sun-01');
+const rain01 = document.querySelector('#raindrop-01');
 
 cloud01.style.display = 'none';
 cloud02.style.display = 'none';
@@ -16,9 +17,17 @@ const showReport = async (report) => {
     const temperature = Math.round(report.main.temp - 272);
     const wind = Math.round(report.wind.speed);
     const clouds = report.clouds.all;
+    const rain = report.weather[0].main;
+    console.log(rain);
 
     document.querySelector('#temp').innerHTML = ((temperature) + '°C');
     document.querySelector('#wind').innerHTML = ((wind) + ' m/s');
+
+    if(rain === 'Rain'){
+        rain01.style.display = 'block';
+    } else {
+        rain01.style.display = 'none';
+    };
 
     if (clouds == 75) {
         cloud01.style.display = 'none';
