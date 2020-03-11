@@ -49,4 +49,4 @@ getWeather();
 getNews();
 getLunchMenu();
 
-export { body, getLunchMenu, getHsl };
+export { getLunchMenu, getHsl, getWeather };
