@@ -1,6 +1,6 @@
 'use strict';
 import { getMenus, coursesFi, coursesEn } from './sodexo-data';
-import { showLunchMenu } from './show-module';
+import { showLunchMenu } from './lunch-show';
 import { getFazerMenus, fazerFi } from './fazer-data';
 import { currentLocation } from '../admin/admin';
 

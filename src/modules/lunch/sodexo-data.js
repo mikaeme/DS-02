@@ -1,24 +1,26 @@
 'use strict';
-import { getJsonMenu } from './fetch-module';
+import { getJsonData } from '../fetch-module';
 import { dd, mm, yyyy } from './date';
 import { currentLocation} from '../admin/admin';
 
 let coursesFi = [];
 let coursesEn = [];
 
+const url = 'https://www.sodexo.fi/ruokalistat/output/daily_json/';
 const today = yyyy + '-' + mm + '-' + dd;
-let response;
+let location = '152/';
 
 // fetch data from Sodexo
 const getMenus = async() => {
-    // const response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/152/2020-03-06');// Backup link for weekends
+    // const response = await getJsonData('https://www.sodexo.fi/ruokalistat/output/daily_json/152/2020-03-06');// Backup link for weekends
     if(currentLocation === 2){
-      response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/158/' + today);
-    } else if(currentLocation === 3){
-            response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/68/' + today);
+        location = '158/';  
+    } else if(currentLocation === 3) {
+        location = '68/';
     } else {
-    response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/152/' + today);
+        location = '152/';
     }
+    const response = await getJsonData(url + location + today);
     const menu = await response;
     parseMenus(menu);
 };

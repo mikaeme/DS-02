@@ -1,5 +1,5 @@
 'use strict';
-import { getJsonMenu } from './fetch-module';
+import { getJsonData } from '../fetch-module';
 
 let fazerFi = [];
 let fazerEn = [];
@@ -8,11 +8,12 @@ let courseEn = [];
 
 const url = 'https://www.fazerfoodco.fi/modules/json/json/Index?costNumber=3104&language=';
 
-const getFazerMenus = async() => {
-    const response = await getJsonMenu(url + 'fi');
-    const responseEn = await getJsonMenu(url + 'en');
+const getFazerMenus = async () => {
+    const response = await getJsonData(url + 'fi');
+    const responseEn = await getJsonData(url + 'en');
     const menu = await response;
     const menuEn = await responseEn;
+
     parseMenus(menu, menuEn);
 };
 

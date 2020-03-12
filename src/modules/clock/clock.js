@@ -1,10 +1,10 @@
 'use strict';
 
 const showTime = () => {
-    var date = new Date();
-    var h = date.getHours() + 2;
-    var m = date.getMinutes();
-    var s = date.getSeconds();
+    const date = new Date();
+    let h = date.getHours();
+    let m = date.getMinutes();
+    let s = date.getSeconds();
 
     if (h == 0) {
         h = 24;
@@ -14,21 +14,11 @@ const showTime = () => {
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
 
-    var time = h + ":" + m + ":" + s + " ";
+    const time = h + ":" + m + ":" + s + " ";
     document.getElementById("clock").innerText = time;
     document.getElementById("clock").textContent = time;
 
     setTimeout(showTime, 1000);
-
 };
-
-
-
-// const displayTime = () => {
-//     var element = document.getElementById("clock");
-//     var now = new Date();
-//     element.innerHTML = now.toLocaleTimeString();
-//     setTimeout(displayTime, 1000);
-// };
 
 export { showTime };

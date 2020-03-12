@@ -39,7 +39,7 @@ ul {
 
 main {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     height: 93vh;
     padding-bottom: 0.5em;
 }

@@ -1,5 +1,5 @@
 'use strict';
-import { schedule } from './main-module';
+import { schedule } from './hsl-main';
 
 // Present data
 const showResult = () => {

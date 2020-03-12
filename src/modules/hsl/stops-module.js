@@ -1,6 +1,6 @@
 'use strict';
 import { currentLocation } from '../admin/admin';
-import { getHsl } from './main-module';
+import { getHsl } from './hsl-main';
 
 const myyrmaki = [
   4150228,
