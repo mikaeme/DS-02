@@ -6,8 +6,12 @@ import { getLunchMenu } from './modules/lunch/main-module';
 import { getHsl } from './modules/hsl/main-module';
 import { getWeather } from './modules/weather/weather';
 import { getNews } from './modules/news/teksti-tv';
-import {getSNews} from './modules/news/sports';
-import {getFNews} from './modules/news/foreign';
+import { getSNews } from './modules/news/sports';
+import { getFNews } from './modules/news/foreign';
+
+
+
+
 import { openAdminPanel } from './modules/admin/admin';
 
 const body = document.querySelector('body');
@@ -22,8 +26,8 @@ getNews();
 getLunchMenu();
 
 let hslTimer = setInterval(() => {
-        getHsl();
-  }, 60000);
+    getHsl();
+}, 60000);
 
 
 let newsCounter = 0;
@@ -52,4 +56,6 @@ let weatherTimer = setInterval(() => {
 
 
 
-export { getLunchMenu, getHsl, getWeather };
+export { body };
+export { getLunchMenu, getHsl };
+export { getWeather };

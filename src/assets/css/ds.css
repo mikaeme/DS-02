@@ -228,6 +228,8 @@ header {
 #raindrop-id {
     width: 1em;
 }
+
+
 /* SLIDESHOW */
 
 .slides {
@@ -370,6 +372,7 @@ header {
     text-transform: uppercase;
 }
 
+
 /* ADMIN PANEL */
 
 .modal {
@@ -385,8 +388,12 @@ header {
     z-index: 10;
     box-shadow: 2px 2px 8px rgb(22, 2, 0);
 }
--pö
+
 .modal-container {
+    display: flex;
+}
+
+-pö .modal-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -396,7 +403,7 @@ header {
     padding: 1em;
     font: 2em 'Rubik';
     background-color: var(--color-5);
-    color:white;
+    color: white;
     width: 10em;
     margin: 1em 0 0 1em;
     text-align: center;
