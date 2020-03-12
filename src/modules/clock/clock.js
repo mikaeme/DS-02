@@ -2,7 +2,7 @@
 
 const showTime = () => {
     var date = new Date();
-    var h = date.getHours();
+    var h = date.getHours() + 2;
     var m = date.getMinutes();
     var s = date.getSeconds();
 
