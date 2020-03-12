@@ -8,6 +8,8 @@ import { getWeather } from './modules/weather/weather';
 import { getNews } from './modules/news/news-main';
 import { openAdminPanel } from './modules/admin/admin';
 
+import { getAltNews } from './modules/news/news';
+
 // button to open the control panel
 
 document.querySelector('#m-logo').addEventListener('click', () => openAdminPanel());
@@ -19,6 +21,7 @@ nextSlide();
 getHsl();
 getWeather();
 getLunchMenu();
+getAltNews();
 
 // Set timer to fetch and display HSL data once in a minute
 
