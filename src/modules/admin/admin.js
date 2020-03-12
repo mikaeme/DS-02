@@ -1,10 +1,12 @@
 'use strict';
 
 import { getLunchMenu, getHsl, getWeather } from '../../index';
-import { setHslLocation} from '../hsl/stops-module';
+import { setHslLocation } from '../hsl/stops-module';
+import { changeLanguage } from './language-module';
 
 // set Myyrmäki as the default location
 let currentLocation = 0;
+let finnish = true;
 
 const panel = document.querySelector('.modal');
 const body = document.querySelector('body');
@@ -61,5 +63,15 @@ document.querySelector('#location-ara').addEventListener('click', () => {
     setLocation('Arabia');
 });
 
+document.querySelector('#language').addEventListener('click', () => {
+    finnish = !finnish;
+    if (finnish) {
+        document.querySelector('#language').innerHTML = ('Change language');
+    } else {
+        document.querySelector('#language').innerHTML = ('Vaihda kieli');
+    }
+    changeLanguage();
+    getLunchMenu();
+});
 
-export { openAdminPanel, currentLocation };
+export { openAdminPanel, currentLocation, finnish };
