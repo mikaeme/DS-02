@@ -1,6 +1,10 @@
 'use strict';
 const lunchMenu = document.querySelector('.lunch-menu');
 
+/**
+ * Display the menu, each row is an <ul> element
+ * @param {array} menu - array containing menu objects
+ */
 const showLunchMenu = async(menu) => {
   lunchMenu.innerHTML = ('');
   console.log('MENU', menu); 

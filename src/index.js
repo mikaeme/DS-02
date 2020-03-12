@@ -8,6 +8,8 @@ import { getWeather } from './modules/weather/weather';
 import { getNews } from './modules/news/news-main';
 import { openAdminPanel } from './modules/admin/admin';
 
+// button to open the control panel
+
 document.querySelector('#m-logo').addEventListener('click', () => openAdminPanel());
 
 // Get the initial content for all page elements
@@ -24,7 +26,7 @@ let hslTimer = setInterval(() => {
     getHsl();
 }, 60000);
 
-// Set timer to switch between news pages in 10 second intevals
+// Set timer to switch between news pages in 10 second intervals
 
 let newsCounter = 0;
 let newsTimer = setInterval(() => {

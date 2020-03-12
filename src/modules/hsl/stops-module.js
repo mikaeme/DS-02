@@ -2,6 +2,7 @@
 import { currentLocation } from '../admin/admin';
 import { getHsl } from './hsl-main';
 
+// Create arrays of bus stop ids for each campus
 const myyrmaki = [
   4150228,
   4150201,
@@ -39,6 +40,11 @@ const arabia = [
 ];
 
 let stopId = myyrmaki;
+
+/**
+ * Choose the correct array for current location and call for schedules
+ */
+
 const setHslLocation = () => {
   if (currentLocation === 1) {
     stopId = karaportti;

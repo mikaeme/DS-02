@@ -4,6 +4,10 @@ import { showLunchMenu } from './lunch-show';
 import { getFazerMenus, fazerFi } from './fazer-data';
 import { currentLocation } from '../admin/admin';
 
+/**
+ * Function call for fetching and displaying data
+ */
+
 const getLunchMenu = async () => {
  // fetch lunch data
     if (currentLocation === 1) {

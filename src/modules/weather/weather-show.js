@@ -11,8 +11,13 @@ cloud02.style.display = 'none';
 cloud03.style.display = 'none';
 sun01.style.display = 'none';
 
+/**
+ * Display weather according to data
+ * @param {object} report - weather data 
+ */
+
 const showWeather = async (report) => {
-    const temperature = Math.round(report.main.temp - 272);
+    const temperature = Math.round(report.main.temp - 272); // convert kelvin to celsius
     const wind = Math.round(report.wind.speed);
     const clouds = report.clouds.all;
     const rain = report.weather[0].main;
@@ -20,13 +25,13 @@ const showWeather = async (report) => {
     document.querySelector('#temp').innerHTML = ((temperature) + '°C');
     document.querySelector('#wind').innerHTML = ((wind) + ' m/s');
 
-    if(rain === 'Rain'){
+    if(rain === 'Rain'){                    //Display raindrop if it is raining
         rain01.style.display = 'block';
     } else {
         rain01.style.display = 'none';
     };
 
-    if (clouds == 75) {
+    if (clouds == 75) {                     //display clouds or sun
         cloud01.style.display = 'none';
         cloud02.style.display = 'block';
         cloud03.style.display = 'none';

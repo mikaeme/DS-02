@@ -1,9 +1,12 @@
 'use strict';
 import { schedule } from './hsl-main';
 
-// Present data
+/**
+ * Display 13 lines of schedules, starting from the 3rd one in the array
+ * 
+ */
+
 const showResult = () => {
-    console.log('HSL', schedule);
     document.querySelector('.hsl-list').innerHTML ='';
     for (let i=2;i<15;i++) {
         document.querySelector('.hsl-list').innerHTML += (`<ul class="hsl-row">

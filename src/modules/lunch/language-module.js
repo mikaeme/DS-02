@@ -1,28 +1,30 @@
-import { menu, menuFazer, coursesFi, coursesEn, fazerFi, fazerEn } from '../index';
+// NOT USED!
 
-let finnish = true;
+// import { menu, menuFazer, coursesFi, coursesEn, fazerFi, fazerEn } from '../index';
 
-const ChangeLang = () => {
-    menu.innerHTML = '';
-    menuFazer.innerHTML = '';
+// let finnish = true;
 
-    if (finnish) {
-        coursesEn.forEach(annos => {
-            menu.innerHTML += '<li class="course">' + annos + '</li>';
-        });
-        fazerEn.forEach(annos => {
-            menuFazer.innerHTML += '<li class="course">' + annos + '</li>';
-        });
-        finnish = false;
-    } else {
-        coursesFi.forEach(annos => {
-            menu.innerHTML += '<li class="course">' + annos + '</li>';
-        });
-        fazerFi.forEach(annos => {
-            menuFazer.innerHTML += '<li class="course">' + annos + '</li>';
-        });
-        finnish = true;
-    };
-};
+// const ChangeLang = () => {
+//     menu.innerHTML = '';
+//     menuFazer.innerHTML = '';
 
-export { ChangeLang, finnish };
+//     if (finnish) {
+//         coursesEn.forEach(annos => {
+//             menu.innerHTML += '<li class="course">' + annos + '</li>';
+//         });
+//         fazerEn.forEach(annos => {
+//             menuFazer.innerHTML += '<li class="course">' + annos + '</li>';
+//         });
+//         finnish = false;
+//     } else {
+//         coursesFi.forEach(annos => {
+//             menu.innerHTML += '<li class="course">' + annos + '</li>';
+//         });
+//         fazerFi.forEach(annos => {
+//             menuFazer.innerHTML += '<li class="course">' + annos + '</li>';
+//         });
+//         finnish = true;
+//     };
+// };
+
+// export { ChangeLang, finnish };

@@ -4,6 +4,11 @@ import { stopId } from './stops-module';
 
 const apiUrl = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
 
+/**
+ * query that receives data about arriving bus lines on a given stop
+ * @param {int} id - HSL stop id number 
+ */
+
 const getStopData = (id) => {
   return `{
     stop(id: "HSL:${id}") {
@@ -28,6 +33,11 @@ const getStopData = (id) => {
   }`;
 };
 
+/**
+ * Convert time stamps
+ * @param {int} seconds 
+ */
+
 const getTime = (seconds) => {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor(seconds / 60) - (hours * 60);
@@ -35,10 +45,14 @@ const getTime = (seconds) => {
   return `${hours}:${minutes < 10 ? '0' + minutes : minutes}`;
 };
 
-// make an array out of received data
+/**
+ * Build an array out of received data.
+ * @param {object} result - fetched data object
+ */
+
 const makeArray = async (result) => {
   const stop = await result.data.stop;
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 4; i++) {     // Get the next 4 buses from each stop
     const ride = await stop.stoptimesWithoutPatterns[i];
     let row = {
       time: getTime(ride.scheduledDeparture),
@@ -48,10 +62,14 @@ const makeArray = async (result) => {
     };
     schedule.push(row);
   };
-  schedule.sort((a, b) => (a.time > b.time) ? 1 : -1);
+  schedule.sort((a, b) => (a.time > b.time) ? 1 : -1); // sort the array by the time of arrival
 };
 
-// Fetch data from HSL
+/**
+ * Fetch data from HSL
+ * @param {int} i - stop array index
+ */
+
 const fetchData = async (i) => {
   let response;
   response = await fetch(apiUrl, {

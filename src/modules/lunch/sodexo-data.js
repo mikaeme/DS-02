@@ -20,16 +20,21 @@ const getMenus = async() => {
     } else {
         location = '152/';
     }
-    const response = await getJsonData(url + location + today);
+    const response = await getJsonData(url + location + today, true);
     const menu = await response;
     parseMenus(menu);
 };
 
-// make an array out of received data
+/**
+ * Convert fetched data to arrays of objects
+ * @param {object} menu - object containing data
+ */
+
 const parseMenus = async(menu) => {
   coursesFi = [];
   coursesEn = [];
     for (let i in menu.courses) {
+        // Create objects
         let rowFi = {
             title: menu.courses[i].title_fi,
             price: menu.courses[i].price,
@@ -40,11 +45,10 @@ const parseMenus = async(menu) => {
             price: menu.courses[i].price,
             properties: menu.courses[i].properties,
         };
+        // push objects to arrays
         coursesFi.push(rowFi);
         coursesEn.push(rowEn);
     }
-    // coursesFi.sort((a, b) => (a.title > b.title) ? 1 : -1);
-    // coursesEn.sort((a, b) => (a.title > b.title) ? 1 : -1);
 };
 
 export { coursesEn, coursesFi, getMenus };
