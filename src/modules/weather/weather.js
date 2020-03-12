@@ -19,7 +19,7 @@ const getWeather = async () => {
     } else {
         url = url1 + 'vantaa' + url2;
     }
-    const response = await getJsonData(url, true);
+    const response = await getJsonData(url, false);
     const weather = await response;
     showWeather(weather);
 };

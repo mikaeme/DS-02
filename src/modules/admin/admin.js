@@ -1,6 +1,6 @@
 'use strict';
 
-import { getLunchMenu, getHsl, getWeather } from '../../index';
+import { getLunchMenu, getHsl, getWeather, getNews } from '../../index';
 import { setHslLocation } from '../hsl/stops-module';
 import { changeLanguage } from './language-module';
 
@@ -72,6 +72,7 @@ document.querySelector('#language').addEventListener('click', () => {
     }
     changeLanguage();
     getLunchMenu();
+    getNews();
 });
 
 export { openAdminPanel, currentLocation, finnish };

@@ -9,10 +9,13 @@ const proxyUrl = 'https://cors-anywhere.herokuapp.com';
  */
 
 const getJsonData = async(url, cors) => {
-    const useProxy = cors;
     let response;
     try {
-        response = await fetch(`${useProxy ? proxyUrl: ''}/${url}`);
+        if(cors){
+        response = await fetch(`${proxyUrl}/${url}`);
+        } else {
+        response = await fetch(`${url}`); 
+        }
         if (!response.ok) {
             throw new Error(`HTTP ${response.status} ${response.statusText}`);
         }

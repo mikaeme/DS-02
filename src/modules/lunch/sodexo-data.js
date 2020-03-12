@@ -20,7 +20,7 @@ const getMenus = async() => {
     } else {
         location = '152/';
     }
-    const response = await getJsonData(url + location + today, true);
+    const response = await getJsonData(url + location + today, false);
     const menu = await response;
     parseMenus(menu);
 };
