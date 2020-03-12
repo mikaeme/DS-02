@@ -9,9 +9,6 @@ import { getNews } from './modules/news/teksti-tv';
 import { getSNews } from './modules/news/sports';
 import { getFNews } from './modules/news/foreign';
 
-
-
-
 import { openAdminPanel } from './modules/admin/admin';
 
 const body = document.querySelector('body');
@@ -38,15 +35,12 @@ let newsTimer = setInterval(() => {
     }
     if (newsCounter === 5) {
         getSNews();
-        console.log('jee');
     }
     if (newsCounter === 10) {
         getFNews();
-        console.log('juu');
     }
     if (newsCounter === 15) {
         newsCounter = 0;
-        console.log('joo');
     }
 }, 2000);
 
@@ -54,8 +48,5 @@ let weatherTimer = setInterval(() => {
     getWeather();
 }, 600000);
 
-
-
-export { body };
 export { getLunchMenu, getHsl };
 export { getWeather };

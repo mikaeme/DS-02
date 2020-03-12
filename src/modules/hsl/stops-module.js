@@ -51,7 +51,6 @@ const setHslLocation = () => {
   }
   getHsl();
 };
-console.log('stopIdx', stopId);
 export { stopId, setHslLocation };
 
 

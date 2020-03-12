@@ -3,7 +3,7 @@ const lunchMenu = document.querySelector('.lunch-menu');
 
 const showLunchMenu = async(menu) => {
   lunchMenu.innerHTML = ('');
-  console.log(menu); 
+  console.log('MENU', menu); 
     for (let i in menu) {
         lunchMenu.innerHTML += (`<ul class="lunch-row">
       <li class="menu-title">${menu[i].title}</li>

@@ -32,7 +32,6 @@ const showNews = async(report) => {
         console.log('Fetch error', error.message);
     }
     let news = await response.json();
-    console.log(news);
     return news;
   };
   

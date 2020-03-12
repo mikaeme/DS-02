@@ -39,7 +39,6 @@ const getTime = (seconds) => {
 const makeArray = async (result) => {
 
   const stop = await result.data.stop;
-  console.log('stops', stop);
   for (let i = 0; i < 4; i++) {
     const ride = await stop.stoptimesWithoutPatterns[i];
     let row = {

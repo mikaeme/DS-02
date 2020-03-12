@@ -18,7 +18,6 @@ const showReport = async (report) => {
     const wind = Math.round(report.wind.speed);
     const clouds = report.clouds.all;
     const rain = report.weather[0].main;
-    console.log(rain);
 
     document.querySelector('#temp').innerHTML = ((temperature) + '°C');
     document.querySelector('#wind').innerHTML = ((wind) + ' m/s');
@@ -62,7 +61,7 @@ const getJsonMenu = async (menuUrl, useProxy = true) => {
         console.error('Fetch menu error', error.message);
     }
     let weather = await response.json();
-    console.log(weather);
+    console.log('WEATHER', weather);
     return weather;
 };
 let url = 'http://api.openweathermap.org/data/2.5/weather?q=Vantaa,fi&APPID=de4a850978be558877b5e66f393abd6b';

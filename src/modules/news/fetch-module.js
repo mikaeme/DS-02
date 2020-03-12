@@ -11,7 +11,7 @@ const getJsonNews = async(menuUrl) => {
         console.log('Fetch error', error.message);
     }
     let news = await response.json();
-    console.log(news);
+    console.log('news', news);
     return news;
 };
 
