@@ -5,7 +5,7 @@ import { nextSlide } from './modules/carousel/carousel';
 import { getLunchMenu } from './modules/lunch/lunch-main';
 import { getHsl } from './modules/hsl/hsl-main';
 import { getWeather } from './modules/weather/weather';
-import { getLocalNews, getSportNews, getForeignNews } from './modules/news/news-main';
+import { getNews } from './modules/news/news-main';
 import { openAdminPanel } from './modules/admin/admin';
 
 document.querySelector('#m-logo').addEventListener('click', () => openAdminPanel());
@@ -16,7 +16,6 @@ showTime();
 nextSlide();
 getHsl();
 getWeather();
-getLocalNews();
 getLunchMenu();
 
 // Set timer to fetch and display HSL data once in a minute
@@ -31,13 +30,16 @@ let newsCounter = 0;
 let newsTimer = setInterval(() => {
     newsCounter++;
     if (newsCounter === 1) {
-        getLocalNews();
+        const limits = [11, 7, 13];
+        getNews(102, limits);
     }
     if (newsCounter === 5) {
-        getSportNews();
+        const limits = [20, 5, 20];
+        getNews(130, limits);
     }
     if (newsCounter === 10) {
-        getForeignNews();
+        const limits = [15, 7, 17];
+        getNews(201, limits);
     }
     if (newsCounter === 15) {
         newsCounter = 0;
