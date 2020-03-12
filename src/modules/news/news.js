@@ -1,6 +1,5 @@
 import { getJsonData } from '../fetch-module';
-
-const showNews = async(report) => {};
+import {showNews} from './news-show1';
 
 const getAltNews = async() => {
     const url = 'http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=818b12af0ccc48dbb9176013a960243b';

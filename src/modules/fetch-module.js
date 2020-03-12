@@ -2,6 +2,12 @@
 
 const proxyUrl = 'https://cors-anywhere.herokuapp.com';
 
+/**
+ * Common fetch function for all modules except HSL
+ * @param {string} url - API query url 
+ * @param {boolean} cors - defines whether to use cors or not
+ */
+
 const getJsonData = async(url, cors) => {
     const useProxy = cors;
     let response;

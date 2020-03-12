@@ -31,25 +31,25 @@ let hslTimer = setInterval(() => {
 
 // Set timer to switch between news pages in 10 second intervals
 
-let newsCounter = 0;
-let newsTimer = setInterval(() => {
-    newsCounter++;
-    if (newsCounter === 1) {
-        const limits = [11, 7, 13];
-        getNews(102, limits);
-    }
-    if (newsCounter === 5) {
-        const limits = [20, 5, 20];
-        getNews(130, limits);
-    }
-    if (newsCounter === 10) {
-        const limits = [15, 7, 17];
-        getNews(201, limits);
-    }
-    if (newsCounter === 15) {
-        newsCounter = 0;
-    }
-}, 2000);
+// let newsCounter = 0;
+// let newsTimer = setInterval(() => {
+//     newsCounter++;
+//     if (newsCounter === 1) {
+//         const limits = [11, 7, 13];
+//         getNews(102, limits);
+//     }
+//     if (newsCounter === 5) {
+//         const limits = [20, 5, 20];
+//         getNews(130, limits);
+//     }
+//     if (newsCounter === 10) {
+//         const limits = [15, 7, 17];
+//         getNews(201, limits);
+//     }
+//     if (newsCounter === 15) {
+//         newsCounter = 0;
+//     }
+// }, 2000);
 
 // Set timer to fetch and display weather data every 5 minutes
 
