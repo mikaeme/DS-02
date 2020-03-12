@@ -30,15 +30,15 @@ const getNews = () => {
         let newsTimer = setInterval(() => {
             newsCounter++;
             if (newsCounter === 1) {
-                const limits = [0, 4];
+                const limits = [0, 3];
                 getEnglishNews(limits);
             }
             if (newsCounter === 5) {
-                const limits = [5, 9];
+                const limits = [4, 7];
                 getEnglishNews(limits);
             }
             if (newsCounter === 10) {
-                const limits = [10, 14];
+                const limits = [8, 11];
                 getEnglishNews(limits);
             }
             if (newsCounter === 15) {
