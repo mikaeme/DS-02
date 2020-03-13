@@ -1,6 +1,7 @@
 'use strict';
 import {finnish} from './admin'; 
 
+// change title and legend languages
 const changeLanguage = () =>{
     if(finnish) {
         document.querySelector('#lunch-title').innerHTML = ('Lounaslista');

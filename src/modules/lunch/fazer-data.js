@@ -1,6 +1,7 @@
 'use strict';
 import { getJsonData } from '../fetch-module';
 
+// Declare menu arrays
 let fazerFi = [];
 let fazerEn = [];
 let course = [];
@@ -9,7 +10,7 @@ let courseEn = [];
 const url = 'https://www.fazerfoodco.fi/modules/json/json/Index?costNumber=3104&language=';
 
 /**
- * Function calls fro fetching the menus
+ * Function calls for fetching the menus
  */
 
 const getFazerMenus = async () => {
