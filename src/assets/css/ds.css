@@ -184,20 +184,26 @@ header {
 }
 
 .lunch-menu li {
-    padding: 10px;
+    padding: 8px;
 }
 
 .menu-title {
+<<<<<<< HEAD
     width: 60%;
     line-height: 1.2;
+=======
+    width: 70%;
+>>>>>>> 85b23b5ae4e3fe064bfd08d648937ec50f9157bf
 }
 
 .menu-price {
-    width: 30%;
+    width: 20%;
+    font-size: 0.9em;
 }
 
 .menu-properties {
     width: 10%;
+    font-size: 0.9em;
 }
 
 
@@ -343,7 +349,10 @@ header {
     text-align: left;
     word-spacing: 0.5em;
     line-height: 2;
+<<<<<<< HEAD
     padding-left: 10px;
+=======
+>>>>>>> 85b23b5ae4e3fe064bfd08d648937ec50f9157bf
 }
 
 #ttext>header {
