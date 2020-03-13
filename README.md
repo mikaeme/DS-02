@@ -1,5 +1,5 @@
-#Digital signage app
+# Digital signage app
 A digital signage app by Team Haundr, buily as an exercise project in Metropolia UAS.
 
-##Quick start
+## Quick start
 Made with WebPack.
