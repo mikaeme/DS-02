@@ -28,6 +28,7 @@ h1 {
 body {
     padding: 1em;
     background-image: linear-gradient(to bottom right, #982e91, #f93b3b, #ff8600);
+    /* background-image: url("/assets/img/liquidworms.png");*/
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
@@ -45,13 +46,11 @@ main {
 }
 
 .small-section {
-    flex: 2;
+    flex: 3;
     margin: 1em;
-    height: 98%;
 }
 
 .big-section {
-    flex: 5;
     height: 93%;
 }
 
@@ -59,7 +58,7 @@ main {
     display: flex;
     justify-content: center;
     margin: 0.5em;
-    height: 49%;
+    height: 45%;
 }
 
 
@@ -68,12 +67,10 @@ main {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 0.5em;
     height: 10vh;
-    text-align: center;
-    text-shadow: 1px 1px 4px #000000;
+    text-shadow: 2px 2px 8px black;
     width: 100%;
-    font: 0.8em 'Raleway';
+    font: 0.4em 'Raleway';
 }
 
 .metropolia {
@@ -82,7 +79,7 @@ header {
 }
 
 #m-logo {
-    width: 15%;
+    width: 60%;
     padding-right: 1em;
 }
 
@@ -90,7 +87,8 @@ header {
     display: flex;
     justify-self: space-between;
     color: #ffffff;
-    font: 3em 'Roboto Mono';
+    font: 6em 'Roboto Mono';
+    text-shadow: 2px 2px 8px black;
     letter-spacing: 7px;
 }
 
@@ -105,13 +103,12 @@ header {
 }
 
 .small-window {
-    width: 30%;
-    /*height: fit-content;*/
+    width: 40%;
+    height: fit-content;
 }
 
 .big-window {
-    width: 70%;
-    /*height: fit-content;*/
+    width: 60%;
 }
 
 .window-content {
@@ -124,6 +121,7 @@ header {
 
 #r1-w1 {
     height: 100%;
+    width: 106%;
 }
 
 #r1-w1 header {
@@ -137,24 +135,20 @@ header {
 }
 
 #r1-w2 {
-    background-color: var(--color-2);
+    width: 49%;
+    height: 55%;
 }
 
 #r1-w3 {
     display: flex;
     flex-direction: column;
-    /* padding: 6em; */
-}
-
-#r1-w3 h3 {
-    text-transform: uppercase;
-    text-shadow: 1px 1px 4px #000000;
-    font: 2em 'Roboto Mono';
 }
 
 #r2-w2 {
     background-color: var(--color-5);
     text-align: left;
+    width: 59%;
+    height: 100%;
 }
 
 #r2-w2 header {
@@ -164,6 +158,9 @@ header {
 
 #r2-w3 {
     background-color: var(--color-4);
+    height: 90%;
+    width: 22vw;
+    margin-top: 40px;
 }
 
 
@@ -171,18 +168,18 @@ header {
 
 .lunch-menu {
     color: white;
-    font: 2vh 'Quattrocento Sans';
+    font: 2.2vh 'Quattrocento Sans';
     text-align: left;
-    line-height: 1.5;
-    background-color: rgba(255, 255, 255, 0.3);
+    line-height: 1.4;
+    background-color: rgba(255, 255, 255, 0.4);
     box-shadow: 2px 2px 8px rgb(218, 22, 8);
 }
 
 .lunch-row {
     display: flex;
     width: 100%;
-    height: 4.5vw;
-    line-height: 1.2;
+    height: 8vh;
+    line-height: 0.9;
     border-radius: 2px;
 }
 
@@ -192,6 +189,7 @@ header {
 
 .menu-title {
     width: 60%;
+    line-height: 1.2;
 }
 
 .menu-price {
@@ -207,11 +205,20 @@ header {
 
 #weather {
     font-family: 'Roboto Mono';
+    padding-left: 80px;
 }
 
-#cloud-02>.w-icon-md {
+#weather-location {
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px #000000;
+    font: 3em 'Roboto Mono';
+    padding-left: 80px;
+}
+
+.w-icon-md {
+    margin: 40px 0 0 100px;
     height: 200px;
-    width: 250px;
+    width: 200px;
     object-fit: fill;
 }
 
@@ -235,19 +242,14 @@ header {
     overflow: hidden;
 }
 
-
-/* video {
-    width: 47% !important;
-    height: auto !important;
-} */
-
 .slides video {
+    padding-left: 10px;
     position: absolute;
     transition: opacity 1s;
     opacity: 0;
     object-fit: cover;
-    height: 42%;
-    width: 47%;
+    height: 35%;
+    width: 35%;
 }
 
 .slides video:first-child {
@@ -264,7 +266,7 @@ header {
 /* HSL */
 
 #hsl-menu {
-    padding-top: 10px;
+    padding-top: 6px;
     padding-left: 0.4em;
 }
 
@@ -276,7 +278,7 @@ header {
 }
 
 .dest {
-    padding-left: 7.2em;
+    padding-left: 4.2em;
 }
 
 .stop {
@@ -285,8 +287,8 @@ header {
 
 #hsl-logo {
     padding-top: 5px;
-    padding-left: 2em;
-    height: 40px;
+    padding-left: 1em;
+    height: 45px;
     width: 120px;
     position: relative;
 }
@@ -308,7 +310,7 @@ header {
 }
 
 .hsl-time {
-    padding-left: 2em;
+    padding-left: 1em;
     column-width: 50px;
 }
 
@@ -319,13 +321,14 @@ header {
 }
 
 .hsl-destination {
-    padding-left: 2em;
-    column-width: 267px;
+    padding-left: 0.1em;
+    padding-right: 0;
+    column-width: 285px;
 }
 
 .hsl-stop {
-    padding-left: 4em;
-    column-width: 100px;
+    padding-left: 3em;
+    column-width: 120px;
 }
 
 .hsl-row>li {
@@ -336,11 +339,11 @@ header {
 /* TELETEXT */
 
 #ttext>li {
-    font: 0.9em 'Roboto Mono';
+    font: 1em 'Roboto Mono';
     text-align: left;
     word-spacing: 0.5em;
-    line-height: 2.5;
-    line-height: 2.8;
+    line-height: 2;
+    padding-left: 10px;
 }
 
 #ttext>header {
@@ -348,12 +351,13 @@ header {
     font: 1.9em 'Press Start 2P';
     color: #ffffff;
     background-color: #0000ff;
+    padding: 10px 0 0 3px;
     margin-bottom: 10px;
 }
 
 #ttext>header>h3 {
-    padding-top: 10px;
-    font-size: 0.8em;
+    padding: 80px;
+    font-size: 0.55em;
     align-self: center;
 }
 
@@ -369,6 +373,10 @@ header {
 #time,
 #num {
     text-transform: uppercase;
+}
+
+#time {
+    padding-left: 5px;
 }
 
 
@@ -392,7 +400,7 @@ header {
     display: flex;
 }
 
--pö .modal-container {
+.modal-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
