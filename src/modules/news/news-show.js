@@ -1,35 +1,76 @@
 'use strict';
+import { finnish } from '../admin/admin';
+const newsList = document.querySelector('#subpage');
 
 /**
- * Display news
- * @param {object} report - data object
- * @param {*} limits - defines news to be fetched 
+ * Shows data from different pages in 5 second intervals
+ * @param {array} news - news data
  */
+const showFinnishNews = (news) => {
+  let i=0;
 
-const showNews = async(report, limits) => {
-  const page = report.teletext.page;
-  const loop = page.subpage[0].content[0].line;
-  document.querySelector('#subpage').innerHTML = ('');
+  //  initial display loop
+  for (let j = 15; j < 19; j++) {   //  values of j chosen because of the irregularites in yle static data
+    if(news[i].teletext.page.subpage[0].content[0].line[j].Text != null)  // skip empty lines
+    newsList.innerHTML += ('<li>' + news[i].teletext.page.subpage[0].content[0].line[j].Text + '</li>');
+  }
+  i++;
 
-  for (let i=0; i < limits[0];i++) {
-    for(i = limits[1]; i < limits[2]; i++){
+  //  timer
+  let newsTimer = setInterval(() => {
+    newsList.innerHTML = ('');
+    for (let j = 15; j < 19; j++) {
+      if(news[i].teletext.page.subpage[0].content[0].line[j].Text != null)
+      newsList.innerHTML += ('<li>' + news[i].teletext.page.subpage[0].content[0].line[j].Text + '</li>');
+    }
+    i++;
+    if(i>2) i=0;
 
-      //display page number and time
-      document.querySelector('#num').innerHTML = ('<li>' + (page.number) + ' ' + (page.name) + '</li>');
-      document.querySelector('#time').innerHTML = ('<li>' + (page.time) + '</li>');
-      if (loop[i].Text != null)
-          document.querySelector('#subpage').innerHTML += ('<li>' + (loop[i].Text) + '</li>'); // skip empty values
-      }
-      document.querySelector('#subpage').innerHTML += ('<li>' + (loop[22].Text) + '</li>');
+    //  if language is changed, interrupt the timer and clear display
+    if(!finnish) {
+      clearInterval(newsTimer);
+      newsList.innerHTML = ('');
+    }
+  }, 5000);
+};
+
+ // ^Same in English
+const showEnglishNews = (news) => {
+  let i=0;
+  newsList.innerHTML = ('');
+  for (let j = 0; j < 4; j++) {
+    if(news[i].articles[j].title != null)
+    newsList.innerHTML += ('<li>' + news[i].articles[j].title + '</li>');
+  }
+  i++;
+  let newsTimer = setInterval(() => {
+    newsList.innerHTML = ('');
+    for (let j = 0; j < 4; j++) {
+      if(news[i].articles[j].title != null)
+      newsList.innerHTML += ('<li>' + news[i].articles[j].title + '</li>');
+    }
+    i++;
+    if(i>2) i=0;
+    if(finnish) {
+      clearInterval(newsTimer);
+      newsList.innerHTML = ('');
+    }
+  }, 10000);
+};
+
+/**
+ * Receives data from news-main.js, checks the language setting
+ * and calls the appropriate display function
+ * @param {array} newsFi - news data in Finnish
+ * @param {array} newsEn - news data in English
+ */
+const showNews = (newsFi, newsEn) => {
+  newsList.innerHTML = ('');
+  if (finnish) {
+    showFinnishNews(newsFi);
+  } else {
+    showEnglishNews(newsEn);
   }
 };
 
-const showEnglishNews = async(report, limits) => {
-  document.querySelector('#subpage').innerHTML = ('');
-
-  for (let i=limits[0]; i < limits[1];i++) {
-    document.querySelector('#subpage').innerHTML += ('<li>' + (report.articles[i].title) + '</li>');
-  }
-};
-
-export { showNews, showEnglishNews };
+export { showNews };
