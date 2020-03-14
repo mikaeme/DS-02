@@ -21,7 +21,7 @@ const showNews = (news) => {
   newsTimer = setInterval(() => {
     console.log(i);
     newsList.innerHTML = ('');
-    for (let j = 1; j < 5; j++) {
+    for (let j = 0; j < 4; j++) {
       newsList.innerHTML += ('<li>' + news[i][j] + '</li>');
     }
     i++;

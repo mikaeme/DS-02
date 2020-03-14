@@ -12,7 +12,7 @@ let location = '152/';
 
 // fetch data from Sodexo
 const getMenus = async() => {
-    // const response = await getJsonData('https://www.sodexo.fi/ruokalistat/output/daily_json/152/2020-03-06');// Backup link for weekends
+    const response = await getJsonData('https://www.sodexo.fi/ruokalistat/output/daily_json/152/2020-03-13');// Backup link for weekends
     if(currentLocation === 2){
         location = '158/';  
     } else if(currentLocation === 3) {
@@ -20,7 +20,7 @@ const getMenus = async() => {
     } else {
         location = '152/';
     }
-    const response = await getJsonData(url + location + today, false);
+    //const response = await getJsonData(url + location + today, false);
     const menu = await response;
     parseMenus(menu);
 };
