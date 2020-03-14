@@ -1,7 +1,7 @@
 'use strict';
 import { getJsonData } from '../fetch-module';
 import { dd, mm, yyyy } from '../clock/date';
-import { currentLocation} from '../admin/admin';
+import { currentLocation } from '../admin/admin';
 
 let coursesFi = [];
 let coursesEn = [];
@@ -11,16 +11,16 @@ const today = yyyy + '-' + mm + '-' + dd;
 let location = '152/';
 
 // fetch data from Sodexo
-const getMenus = async() => {
-    const response = await getJsonData('https://www.sodexo.fi/ruokalistat/output/daily_json/152/2020-03-13');// Backup link for weekends
-    if(currentLocation === 2){
-        location = '158/';  
-    } else if(currentLocation === 3) {
+const getMenus = async () => {
+    if (currentLocation === 2) {
+        location = '158/';
+    } else if (currentLocation === 3) {
         location = '68/';
     } else {
         location = '152/';
     }
-    //const response = await getJsonData(url + location + today, false);
+    const response = await getJsonData(url + location + today, false);
+    //const response = await getJsonData('https://www.sodexo.fi/ruokalistat/output/daily_json/152/2020-03-13');// Backup link for weekends
     const menu = await response;
     parseMenus(menu);
 };
@@ -30,9 +30,9 @@ const getMenus = async() => {
  * @param {object} menu - object containing data
  */
 
-const parseMenus = async(menu) => {
-  coursesFi = [];
-  coursesEn = [];
+const parseMenus = async (menu) => {
+    coursesFi = [];
+    coursesEn = [];
     for (let i in menu.courses) {
         // Create objects
         let rowFi = {

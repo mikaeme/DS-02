@@ -10,7 +10,7 @@ let newsArrayEn = [];
 const ylePages = [102, 130, 201];
 
 //  International news sources to be fetched
-const newsSources = ['bbc-news', 'the-wall-street-journal', 'techcrunch'];
+const newsSources = ['bbc-news', 'the-wall-street-journal', 'fox-sports'];
 
 /**
  * Function call for fetching and displaying news data
