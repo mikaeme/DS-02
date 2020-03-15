@@ -1,6 +1,6 @@
 'use strict';
 import { getJsonData } from '../fetch-module';
-import { dd, mm, yyyy } from './date';
+import { dd, mm, yyyy } from '../clock/date';
 import { currentLocation} from '../admin/admin';
 
 let coursesFi = [];

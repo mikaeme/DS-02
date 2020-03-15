@@ -3,7 +3,7 @@ import { finnish } from '../admin/admin';
 const newsList = document.querySelector('#subpage');
 
 /**
- * Shows data from different pages in 5 second intervals
+ * Shows four news titles from different pages in 5 second intervals
  * @param {array} news - news data
  */
 const showFinnishNews = (news) => {
